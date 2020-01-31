@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="EndScene" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect width="640" height="1136" x="0.01" y="0" anchorOffsetX="0" anchorOffsetY="0" fillColor="0xf90707"/>
+	<e:Label text="最后一个" x="201.67" y="307.66" anchorOffsetX="0" width="236.67" anchorOffsetY="0" height="76.67" size="50"/>
+	<e:Label id="btn_fh" text="回到第一个" x="201.67" y="641.67" anchorOffsetX="0" width="195.33" anchorOffsetY="0" height="70" size="35"/>
+</e:Skin>

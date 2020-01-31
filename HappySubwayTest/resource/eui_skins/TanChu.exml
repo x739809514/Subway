@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TanChu" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Label id="btn_close" text="关闭" x="229.4" y="488" anchorOffsetX="0" width="181.21" anchorOffsetY="0" height="80" size="50"/>
+</e:Skin>
