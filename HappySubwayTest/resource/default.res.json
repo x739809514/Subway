@@ -1,11 +1,11 @@
 {
 	"groups": [
 		{
-			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,subway_jpg,Train,Gar,task,gear",
+			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,subway_jpg,Train,Gar,task,gear,beijin,Sprite,Task1,Bar,Task2,Task3,Que,back",
 			"name": "preload"
 		},
 		{
-			"keys": "subway,Train,background,shelf,Gar,task,gear",
+			"keys": "subway,Train,background,shelf,Gar,task,gear,beijin,Sprite,Task1,Bar,Task2,Task3,Que,back",
 			"name": "subway"
 		}
 	],
@@ -179,6 +179,46 @@
 			"url": "assets/game/gear.png",
 			"type": "image",
 			"name": "gear"
+		},
+		{
+			"url": "assets/game/beijin.jpg",
+			"type": "image",
+			"name": "beijin"
+		},
+		{
+			"url": "assets/game/Sprite.png",
+			"type": "image",
+			"name": "Sprite"
+		},
+		{
+			"url": "assets/game/Task1.png",
+			"type": "image",
+			"name": "Task1"
+		},
+		{
+			"url": "assets/game/Bar.png",
+			"type": "image",
+			"name": "Bar"
+		},
+		{
+			"url": "assets/game/Task2.png",
+			"type": "image",
+			"name": "Task2"
+		},
+		{
+			"url": "assets/game/Task3.png",
+			"type": "image",
+			"name": "Task3"
+		},
+		{
+			"url": "assets/game/Que.png",
+			"type": "image",
+			"name": "Que"
+		},
+		{
+			"url": "assets/game/back.png",
+			"type": "image",
+			"name": "back"
 		}
 	]
 }

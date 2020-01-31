@@ -5,5 +5,5 @@
 	<e:Image width="761.21" height="379.09" x="0" y="756.91" anchorOffsetX="0" anchorOffsetY="0" source="Train"/>
 	<e:Image width="68.49" height="97.27" x="533.58" y="125.63" anchorOffsetX="0" anchorOffsetY="0" source="shelf"/>
 	<e:Image width="76.06" height="92.73" x="533.58" y="317.9" anchorOffsetX="0" anchorOffsetY="0" source="Gar"/>
-	<e:Image width="68.48" height="91.21" x="39.83" y="966.54" anchorOffsetX="0" anchorOffsetY="0" source="task"/>
+	<e:Image id="btn_tc" width="68.48" height="91.21" x="39.83" y="966.54" anchorOffsetX="0" anchorOffsetY="0" source="task"/>
 </e:Skin>

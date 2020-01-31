@@ -22,15 +22,9 @@ var StartScene = (function (_super) {
         return _this;
     }
     StartScene.prototype.onComplete = function () {
-        this.btn_tc.touchEnabled = true;
         this.btn_qh2.touchEnabled = true;
         //添加点击事件
-        this.btn_tc.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTaptc, this);
         this.btn_qh2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTapqiehuan, this);
-    };
-    StartScene.prototype.onTaptc = function () {
-        var tc = new Tanchu2();
-        SceneManager.Instance.pushScene(tc);
     };
     StartScene.prototype.onTapqiehuan = function () {
         var s1 = new GameScene2();

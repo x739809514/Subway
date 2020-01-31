@@ -17,14 +17,23 @@ var Tanchu2 = (function (_super) {
     function Tanchu2() {
         var _this = _super.call(this) || this;
         _this.skinName = "resource/eui_skins/TanChu.exml";
+        _this.addEventListener(egret.Event.ADDED_TO_STAGE, _this.onComplete, _this);
         return _this;
     }
     Tanchu2.prototype.onComplete = function () {
-        this.btn_close.touchEnabled = true;
-        this.btn_close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTapclose, this);
+        this.spr = new egret.Sprite();
+        this.addChild(this.spr);
+        this.spr.x = 0;
+        this.spr.y = 0;
+        this.spr.width = 640;
+        this.spr.height = 1136;
+        this.Back.touchEnabled = true;
+        this.Back.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTapqiehuan, this);
     };
-    Tanchu2.prototype.onTapclose = function () {
-        SceneManager.Instance.closeScene();
+    Tanchu2.prototype.onTapqiehuan = function () {
+        var s1 = new GameScene2();
+        //切换到第二个场景
+        SceneManager.Instance.changeScene(s1);
     };
     return Tanchu2;
 }(Scene));
