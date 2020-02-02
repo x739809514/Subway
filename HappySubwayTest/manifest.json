@@ -11,16 +11,16 @@
 	],
 	"game": [
 		"bin-debug/Scene.js",
-		"bin-debug/AssetAdapter.js",
+		"bin-debug/TweenMove.js",
 		"bin-debug/GameScene2.js",
 		"bin-debug/LoadingUI.js",
 		"bin-debug/Main.js",
 		"bin-debug/NewFile.js",
-		"bin-debug/EndScene2.js",
+		"bin-debug/AssetAdapter.js",
 		"bin-debug/SceneManager.js",
 		"bin-debug/StartScene.js",
 		"bin-debug/Tanchu2.js",
 		"bin-debug/ThemeAdapter.js",
-		"bin-debug/TweenMove.js"
+		"bin-debug/EndScene2.js"
 	]
 }
