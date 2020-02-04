@@ -2,6 +2,8 @@ declare module skins{
 	class ButtonSkin extends eui.Skin{
 	}
 }
+declare class CangKu extends eui.Skin{
+}
 declare module skins{
 	class CheckBoxSkin extends eui.Skin{
 	}

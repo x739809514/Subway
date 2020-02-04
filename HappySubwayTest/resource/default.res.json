@@ -1,16 +1,20 @@
 {
 	"groups": [
 		{
-			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,subway_jpg,Train,Gar,task,gear,beijin,Sprite,Task1,Bar,Task2,Task3,Que,back,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18",
+			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,subway_jpg,Train,Gar,task,gear,beijin,Sprite,Task1,Bar,Task2,Task3,Que,back,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,warehouse,cangkuBak,title,C18,C17,C16,C15,C14,C13,C12,C11,C10,C5,C7,C6,C9,C4,C3,C8,C2,C1,chacha",
 			"name": "preload"
 		},
 		{
-			"keys": "subway,Train,background,shelf,Gar,task,gear,beijin,Sprite,Task1,Bar,Task2,Task3,Que,back",
+			"keys": "subway,Train,background,shelf,Gar,task,gear,beijin,Sprite,Task1,Bar,Task2,Task3,Que,back,warehouse,cangkuBak,title,chacha",
 			"name": "subway"
 		},
 		{
 			"keys": "1,10,11,12,13,14,15,16,17,18,2,3,4,5,6,7,8,9",
 			"name": "Train"
+		},
+		{
+			"keys": "C9,C8,C7,C6,C5,C4,C3,C2,C18,C17,C16,C15,C14,C13,C12,C11,C10,C1",
+			"name": "cangku"
 		}
 	],
 	"resources": [
@@ -313,6 +317,116 @@
 			"url": "assets/game/18.png",
 			"type": "image",
 			"name": "18"
+		},
+		{
+			"url": "assets/game/warehouse.png",
+			"type": "image",
+			"name": "warehouse"
+		},
+		{
+			"url": "assets/game/cangkuBak.png",
+			"type": "image",
+			"name": "cangkuBak"
+		},
+		{
+			"url": "assets/game/title.png",
+			"type": "image",
+			"name": "title"
+		},
+		{
+			"url": "assets/CangKu/C18.png",
+			"type": "image",
+			"name": "C18"
+		},
+		{
+			"url": "assets/CangKu/C17.png",
+			"type": "image",
+			"name": "C17"
+		},
+		{
+			"url": "assets/CangKu/C16.png",
+			"type": "image",
+			"name": "C16"
+		},
+		{
+			"url": "assets/CangKu/C15.png",
+			"type": "image",
+			"name": "C15"
+		},
+		{
+			"url": "assets/CangKu/C14.png",
+			"type": "image",
+			"name": "C14"
+		},
+		{
+			"url": "assets/CangKu/C13.png",
+			"type": "image",
+			"name": "C13"
+		},
+		{
+			"url": "assets/CangKu/C12.png",
+			"type": "image",
+			"name": "C12"
+		},
+		{
+			"url": "assets/CangKu/C11.png",
+			"type": "image",
+			"name": "C11"
+		},
+		{
+			"url": "assets/CangKu/C10.png",
+			"type": "image",
+			"name": "C10"
+		},
+		{
+			"url": "assets/CangKu/C5.png",
+			"type": "image",
+			"name": "C5"
+		},
+		{
+			"url": "assets/CangKu/C7.png",
+			"type": "image",
+			"name": "C7"
+		},
+		{
+			"url": "assets/CangKu/C6.png",
+			"type": "image",
+			"name": "C6"
+		},
+		{
+			"url": "assets/CangKu/C9.png",
+			"type": "image",
+			"name": "C9"
+		},
+		{
+			"url": "assets/CangKu/C4.png",
+			"type": "image",
+			"name": "C4"
+		},
+		{
+			"url": "assets/CangKu/C3.png",
+			"type": "image",
+			"name": "C3"
+		},
+		{
+			"url": "assets/CangKu/C8.png",
+			"type": "image",
+			"name": "C8"
+		},
+		{
+			"url": "assets/CangKu/C2.png",
+			"type": "image",
+			"name": "C2"
+		},
+		{
+			"url": "assets/CangKu/C1.png",
+			"type": "image",
+			"name": "C1"
+		},
+		{
+			"url": "assets/game/chacha.png",
+			"type": "image",
+			"name": "chacha"
 		}
 	]
 }

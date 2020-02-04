@@ -31,9 +31,7 @@ var Tanchu2 = (function (_super) {
         this.Back.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTapqiehuan, this);
     };
     Tanchu2.prototype.onTapqiehuan = function () {
-        var s1 = new GameScene2();
-        //切换到第二个场景
-        SceneManager.Instance.changeScene(s1);
+        SceneManager.Instance.closeScene();
     };
     return Tanchu2;
 }(Scene));

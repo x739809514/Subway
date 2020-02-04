@@ -32,6 +32,8 @@ var GameScene2 = (function (_super) {
         this.btn_qh3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTapqiehuan, this);
         this.btn_tc.touchEnabled = true;
         this.btn_tc.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTaptc, this);
+        this.house.touchEnabled = true;
+        this.house.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTaptc2, this);
     };
     GameScene2.prototype.onTapqiehuan = function () {
         var s1 = new EndScene2();
@@ -42,18 +44,19 @@ var GameScene2 = (function (_super) {
         var tc = new Tanchu2();
         SceneManager.Instance.pushScene(tc);
     };
+    GameScene2.prototype.onTaptc2 = function () {
+        var tc2 = new WareHouse();
+        SceneManager.Instance.pushScene(tc2);
+    };
     //实现零件位移和渐变效果
     GameScene2.prototype.GO = function () {
-        //var centerX:number=320;
-        //var centerY:number=0;
-        // var mstartAngle1=Math.floor(Math.random() * (135 - 45 + 45)) + 45;
-        // var mstartAngle2=Math.floor(Math.random() * (90 - 45 + 45)) + 45;
-        var s = Math.floor(Math.random() * (18 - 1 + 1)) + 1;
-        this.a = s.toString();
+        //egret.localStorage.clear();
+        this.s = Math.floor(Math.random() * (18 - 1 + 1)) + 1;
+        this.a = this.s.toString();
         var time = new Date();
         var hour = time.getHours();
         var minutes = time.getMinutes();
-        if ((hour >= 8 && hour <= 10) || (hour >= 16 && hour <= 18) || (hour >= 20 && hour <= 22)) {
+        if ((hour >= 8 && hour <= 10) || (hour >= 13 && hour <= 18) || (hour >= 20 && hour <= 22)) {
             this.t = new egret.Bitmap();
             this.t.texture = RES.getRes(this.a);
             this.addChild(this.t);
@@ -64,155 +67,228 @@ var GameScene2 = (function (_super) {
             this.spr = new TweenMove(); //TweenMove的实例
             // this.spr.BitmapTest(this.t);
             this.t.touchEnabled = true; //设置鼠标点击事件
-            this.t.addEventListener(egret.TouchEvent.TOUCH_BEGIN, this.Move, this);
-            if (s == 1) {
-                this.G1 = parseInt(window.localStorage.getItem("g1"));
-                console.log(this.G1);
-                this.G1++;
-                var x1 = this.G1.toString();
-                window.localStorage.setItem("g1", x1);
-                console.log("1");
-            }
-            else if (s == 2) {
-                this.G2 = parseInt(window.localStorage.getItem("g2"));
-                console.log(this.G2);
-                this.G2++;
-                var x2 = this.G2.toString();
-                window.localStorage.setItem("g2", x2);
-                console.log("2");
-            }
-            else if (s == 3) {
-                this.G3 = parseInt(window.localStorage.getItem("g3"));
-                console.log(this.G3);
-                this.G3++;
-                var x3 = this.G3.toString();
-                window.localStorage.setItem("g3", x3);
-                console.log("3");
-            }
-            else if (s == 4) {
-                this.G4 = parseInt(window.localStorage.getItem("g4"));
-                console.log(this.G4);
-                this.G4++;
-                var x4 = this.G4.toString();
-                window.localStorage.setItem("g4", x4);
-                console.log("4");
-            }
-            else if (s == 5) {
-                this.G5 = parseInt(window.localStorage.getItem("g5"));
-                console.log(this.G5);
-                this.G5++;
-                var x5 = this.G5.toString();
-                window.localStorage.setItem("g5", x5);
-                console.log("5");
-            }
-            else if (s == 6) {
-                this.G6 = parseInt(window.localStorage.getItem("g6"));
-                console.log(this.G6);
-                this.G6++;
-                var x6 = this.G6.toString();
-                window.localStorage.setItem("g6", x6);
-                console.log("6");
-            }
-            else if (s == 7) {
-                this.G7 = parseInt(window.localStorage.getItem("g7"));
-                console.log(this.G7);
-                this.G7++;
-                var x7 = this.G7.toString();
-                window.localStorage.setItem("g7", x7);
-                console.log("7");
-            }
-            else if (s == 8) {
-                this.G8 = parseInt(window.localStorage.getItem("g8"));
-                console.log(this.G8);
-                this.G8++;
-                var x8 = this.G8.toString();
-                window.localStorage.setItem("g8", x8);
-                console.log("8");
-            }
-            else if (s == 9) {
-                this.G9 = parseInt(window.localStorage.getItem("g9"));
-                console.log(this.G9);
-                this.G9++;
-                var x9 = this.G9.toString();
-                window.localStorage.setItem("g9", x9);
-                console.log("9");
-            }
-            else if (s == 10) {
-                this.G10 = parseInt(window.localStorage.getItem("g10"));
-                console.log(this.G10);
-                this.G10++;
-                var x10 = this.G10.toString();
-                window.localStorage.setItem("g10", x10);
-                console.log("10");
-            }
-            else if (s == 11) {
-                this.G11 = parseInt(window.localStorage.getItem("g11"));
-                console.log(this.G11);
-                this.G11++;
-                var x11 = this.G11.toString();
-                window.localStorage.setItem("g11", x11);
-                console.log("11");
-            }
-            else if (s == 12) {
-                this.G12 = parseInt(window.localStorage.getItem("g12"));
-                console.log(this.G12);
-                this.G12++;
-                var x12 = this.G12.toString();
-                window.localStorage.setItem("g12", x12);
-                console.log("12");
-            }
-            else if (s == 13) {
-                this.G13 = parseInt(window.localStorage.getItem("g13"));
-                console.log(this.G13);
-                this.G13++;
-                var x13 = this.G13.toString();
-                window.localStorage.setItem("g13", x13);
-                console.log("13");
-            }
-            else if (s == 14) {
-                this.G14 = parseInt(window.localStorage.getItem("g14"));
-                console.log(this.G14);
-                this.G14++;
-                var x14 = this.G14.toString();
-                window.localStorage.setItem("g14", x14);
-                console.log("14");
-            }
-            else if (s == 15) {
-                this.G15 = parseInt(window.localStorage.getItem("g15"));
-                console.log(this.G15);
-                this.G15++;
-                var x15 = this.G15.toString();
-                window.localStorage.setItem("g15", x15);
-                console.log("15");
-            }
-            else if (s == 16) {
-                this.G16 = parseInt(window.localStorage.getItem("g16"));
-                console.log(this.G16);
-                this.G16++;
-                var x16 = this.G16.toString();
-                window.localStorage.setItem("g16", x16);
-                console.log("16");
-            }
-            else if (s == 17) {
-                this.G17 = parseInt(window.localStorage.getItem("g17"));
-                console.log(this.G17);
-                this.G17++;
-                var x17 = this.G17.toString();
-                window.localStorage.setItem("g17", x17);
-                console.log("17");
-            }
-            else if (s == 18) {
-                this.G15 = parseInt(window.localStorage.getItem("g18"));
-                console.log(this.G18);
-                this.G18++;
-                var x18 = this.G18.toString();
-                window.localStorage.setItem("g18", x18);
-                console.log("18");
-            }
+            this.t.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Move, this);
         }
     };
-    GameScene2.prototype.Move = function () {
+    GameScene2.prototype.Move = function (event) {
         this.spr.TouchMove(this.t); //调用TweenMove类中的动作函数
+        //egret.localStorage.clear();	
+        if (this.s == 1) {
+            if (egret.localStorage.getItem("g1")) {
+                this.G1 = egret.localStorage.getItem("g1");
+            }
+            else {
+                this.G1 = "0";
+            }
+            console.log(this.G1);
+            console.log("g1");
+            var x1 = (parseInt(this.G1) + 1).toString();
+            egret.localStorage.setItem("g1", x1);
+        }
+        else if (this.s == 2) {
+            if (egret.localStorage.getItem("g2")) {
+                this.G2 = egret.localStorage.getItem("g2");
+            }
+            else {
+                this.G2 = "0";
+            }
+            console.log(this.G2);
+            console.log("g2");
+            var x2 = (parseInt(this.G2) + 1).toString();
+            egret.localStorage.setItem("g2", x2);
+        }
+        else if (this.s == 3) {
+            if (egret.localStorage.getItem("g3")) {
+                this.G3 = egret.localStorage.getItem("g3");
+            }
+            else {
+                this.G3 = "0";
+            }
+            console.log(this.G3);
+            console.log("g3");
+            var x3 = (parseInt(this.G3) + 1).toString();
+            egret.localStorage.setItem("g3", x3);
+        }
+        else if (this.s == 4) {
+            if (egret.localStorage.getItem("g4")) {
+                this.G4 = egret.localStorage.getItem("g4");
+            }
+            else {
+                this.G4 = "0";
+            }
+            console.log(this.G4);
+            console.log("g4");
+            var x4 = (parseInt(this.G4) + 1).toString();
+            egret.localStorage.setItem("g4", x4);
+        }
+        else if (this.s == 5) {
+            if (egret.localStorage.getItem("g5")) {
+                this.G5 = egret.localStorage.getItem("g5");
+            }
+            else {
+                this.G5 = "0";
+            }
+            console.log(this.G5);
+            console.log("g5");
+            var x5 = (parseInt(this.G5) + 1).toString();
+            egret.localStorage.setItem("g5", x5);
+        }
+        else if (this.s == 6) {
+            if (egret.localStorage.getItem("g6")) {
+                this.G6 = egret.localStorage.getItem("g6");
+            }
+            else {
+                this.G6 = "0";
+            }
+            console.log(this.G6);
+            console.log("g6");
+            var x6 = (parseInt(this.G6) + 1).toString();
+            egret.localStorage.setItem("g6", x6);
+        }
+        else if (this.s == 7) {
+            if (egret.localStorage.getItem("g7")) {
+                this.G7 = egret.localStorage.getItem("g7");
+            }
+            else {
+                this.G7 = "0";
+            }
+            console.log(this.G7);
+            console.log("g7");
+            var x7 = (parseInt(this.G7) + 1).toString();
+            egret.localStorage.setItem("g7", x7);
+        }
+        else if (this.s == 8) {
+            if (egret.localStorage.getItem("g8")) {
+                this.G8 = egret.localStorage.getItem("g8");
+            }
+            else {
+                this.G8 = "0";
+            }
+            console.log(this.G8);
+            console.log("g8");
+            var x8 = (parseInt(this.G8) + 1).toString();
+            egret.localStorage.setItem("g8", x8);
+        }
+        else if (this.s == 9) {
+            if (egret.localStorage.getItem("g9")) {
+                this.G9 = egret.localStorage.getItem("g9");
+            }
+            else {
+                this.G9 = "0";
+            }
+            console.log(this.G9);
+            console.log("g9");
+            var x9 = (parseInt(this.G9) + 1).toString();
+            egret.localStorage.setItem("g9", x9);
+        }
+        else if (this.s == 10) {
+            if (egret.localStorage.getItem("g10")) {
+                this.G10 = egret.localStorage.getItem("g10");
+            }
+            else {
+                this.G10 = "0";
+            }
+            console.log(this.G10);
+            console.log("g10");
+            var x10 = (parseInt(this.G10) + 1).toString();
+            egret.localStorage.setItem("g10", x10);
+        }
+        else if (this.s == 11) {
+            if (egret.localStorage.getItem("g11")) {
+                this.G11 = egret.localStorage.getItem("g11");
+            }
+            else {
+                this.G11 = "0";
+            }
+            console.log(this.G11);
+            console.log("g11");
+            var x11 = (parseInt(this.G11) + 1).toString();
+            egret.localStorage.setItem("g11", x11);
+        }
+        else if (this.s == 12) {
+            if (egret.localStorage.getItem("g12")) {
+                this.G12 = egret.localStorage.getItem("g12");
+            }
+            else {
+                this.G12 = "0";
+            }
+            console.log(this.G12);
+            console.log("g12");
+            var x12 = (parseInt(this.G12) + 1).toString();
+            egret.localStorage.setItem("g12", x12);
+        }
+        else if (this.s == 13) {
+            if (egret.localStorage.getItem("g13")) {
+                this.G13 = egret.localStorage.getItem("g13");
+            }
+            else {
+                this.G13 = "0";
+            }
+            console.log(this.G13);
+            console.log("g13");
+            var x13 = (parseInt(this.G13) + 1).toString();
+            egret.localStorage.setItem("g13", x13);
+        }
+        else if (this.s == 14) {
+            if (egret.localStorage.getItem("g14")) {
+                this.G14 = egret.localStorage.getItem("g14");
+            }
+            else {
+                this.G14 = "0";
+            }
+            console.log(this.G14);
+            console.log("g14");
+            var x14 = (parseInt(this.G14) + 1).toString();
+            egret.localStorage.setItem("g14", x14);
+        }
+        else if (this.s == 15) {
+            if (egret.localStorage.getItem("g15")) {
+                this.G15 = egret.localStorage.getItem("g15");
+            }
+            else {
+                this.G15 = "0";
+            }
+            console.log(this.G15);
+            console.log("g15");
+            var x15 = (parseInt(this.G15) + 1).toString();
+            egret.localStorage.setItem("g15", x15);
+        }
+        else if (this.s == 16) {
+            if (egret.localStorage.getItem("g16")) {
+                this.G16 = egret.localStorage.getItem("g16");
+            }
+            else {
+                this.G16 = "0";
+            }
+            console.log(this.G16);
+            console.log("g16");
+            var x16 = (parseInt(this.G16) + 1).toString();
+            egret.localStorage.setItem("g16", x16);
+        }
+        else if (this.s == 17) {
+            if (egret.localStorage.getItem("g17")) {
+                this.G17 = egret.localStorage.getItem("g17");
+            }
+            else {
+                this.G17 = "0";
+            }
+            console.log(this.G17);
+            console.log("g17");
+            var x17 = (parseInt(this.G17) + 1).toString();
+            egret.localStorage.setItem("g17", x17);
+        }
+        else if (this.s == 18) {
+            if (egret.localStorage.getItem("g18")) {
+                this.G18 = egret.localStorage.getItem("g18");
+            }
+            else {
+                this.G18 = "0";
+            }
+            console.log(this.G18);
+            console.log("g18");
+            var x18 = (parseInt(this.G18) + 1).toString();
+            egret.localStorage.setItem("g18", x18);
+        }
     };
     return GameScene2;
 }(Scene));
