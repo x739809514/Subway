@@ -12,6 +12,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 // TypeScript file
+//仓库页面，仓库中存放当前采集到的零件个数
 var WareHouse = (function (_super) {
     __extends(WareHouse, _super);
     function WareHouse() {
@@ -28,7 +29,7 @@ var WareHouse = (function (_super) {
         SceneManager.Instance.closeScene();
     };
     WareHouse.prototype.Label = function () {
-        this.r1 = egret.localStorage.getItem("g1");
+        this.r1 = egret.localStorage.getItem("g1"); //获取本地数据
         this.r2 = egret.localStorage.getItem("g2");
         this.r3 = egret.localStorage.getItem("g3");
         this.r4 = egret.localStorage.getItem("g4");
@@ -46,7 +47,7 @@ var WareHouse = (function (_super) {
         this.r16 = egret.localStorage.getItem("g16");
         this.r17 = egret.localStorage.getItem("g17");
         this.r18 = egret.localStorage.getItem("g18");
-        var L1 = new egret.TextField();
+        var L1 = new egret.TextField(); //将获取到的数据添加到对应零件下。。。本来应该通过循环实现，但是不知为何会报错
         L1.text = this.r1;
         this.addChild(L1);
         L1.x = 113.31;
