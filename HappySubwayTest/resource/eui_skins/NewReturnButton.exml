@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="NewReturnButtonSkin" width="50" height="35" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="17023864414" ></w:Config>
+	<e:Image width="50" height="35" x="0" y="0" source="back"/>
+</e:Skin>

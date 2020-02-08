@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="EndScene" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Label text="最后一个" x="201.67" y="307.66" anchorOffsetX="0" width="236.67" anchorOffsetY="0" height="76.67" size="50"/>
+	<e:Image width="674.85" height="1136" y="0" anchorOffsetX="0" anchorOffsetY="0" source="Train2" x="-34.85"/>
+	<e:Image width="68.49" height="97.27" x="533.58" y="125.63" anchorOffsetX="0" anchorOffsetY="0" source="shelf"/>
+	<e:Image width="76.06" height="92.73" x="533.58" y="293.9" anchorOffsetX="0" anchorOffsetY="0" source="Gar"/>
+	<e:Image id="house_2" width="88" height="85.34" x="523.82" y="446.66" anchorOffsetX="0" anchorOffsetY="0" source="warehouse"/>
+	<e:Image id="btn_tc" width="68.48" height="91.21" x="39.83" y="966.54" anchorOffsetX="0" anchorOffsetY="0" source="task"/>
+	<e:Image id="btn_qh3" width="50.66" height="56" x="482.92" y="655.88" anchorOffsetX="0" anchorOffsetY="0" source="right"/>
+</e:Skin>

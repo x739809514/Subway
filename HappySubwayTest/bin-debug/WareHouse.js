@@ -22,10 +22,10 @@ var WareHouse = (function (_super) {
         return _this;
     }
     WareHouse.prototype.onComplete = function () {
-        this.Tuichu.touchEnabled = true;
-        this.Tuichu.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClose, this);
+        this.Close.touchEnabled = true;
+        this.Close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClose, this);
     };
-    WareHouse.prototype.OnClose = function () {
+    WareHouse.prototype.OnClose = function (event) {
         SceneManager.Instance.closeScene();
     };
     WareHouse.prototype.Label = function () {
@@ -137,6 +137,32 @@ var WareHouse = (function (_super) {
         this.addChild(L18);
         L18.x = 517.25;
         L18.y = 1092.36;
+    };
+    WareHouse.prototype.Finish = function () {
+        this.R1 = parseInt(egret.localStorage.getItem("g1"));
+        this.R2 = parseInt(egret.localStorage.getItem("g2"));
+        this.R3 = parseInt(egret.localStorage.getItem("g3"));
+        this.R4 = parseInt(egret.localStorage.getItem("g4"));
+        this.R5 = parseInt(egret.localStorage.getItem("g5"));
+        this.R6 = parseInt(egret.localStorage.getItem("g6"));
+        this.R7 = parseInt(egret.localStorage.getItem("g7"));
+        this.R8 = parseInt(egret.localStorage.getItem("g8"));
+        this.R9 = parseInt(egret.localStorage.getItem("g9"));
+        this.R10 = parseInt(egret.localStorage.getItem("g10"));
+        this.R11 = parseInt(egret.localStorage.getItem("g11"));
+        this.R12 = parseInt(egret.localStorage.getItem("g12"));
+        this.R13 = parseInt(egret.localStorage.getItem("g13"));
+        this.R14 = parseInt(egret.localStorage.getItem("g14"));
+        this.R15 = parseInt(egret.localStorage.getItem("g15"));
+        this.R16 = parseInt(egret.localStorage.getItem("g16"));
+        this.R17 = parseInt(egret.localStorage.getItem("g17"));
+        this.R18 = parseInt(egret.localStorage.getItem("g18"));
+        if (this.R1 >= 1 && this.R2 >= 1 && this.R3 >= 1 && this.R4 >= 1 && this.R5 >= 1 && this.R6 >= 1 && this.R7 >= 1 && this.R8 >= 1 && this.R9 >= 1 && this.R10 >= 1 && this.R11 >= 1 && this.R12 >= 1 && this.R13 >= 1 && this.R14 >= 1 && this.R15 >= 1 && this.R16 >= 1 && this.R17 >= 1 && this.R18 >= 1) {
+            return true;
+        }
+        else {
+            return false;
+        }
     };
     return WareHouse;
 }(Scene));

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MyButtonSkin" width="62" height="54" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="17023563e69" ></w:Config>
+	<e:Image width="62" height="54" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" source="chacha"/>
+</e:Skin>

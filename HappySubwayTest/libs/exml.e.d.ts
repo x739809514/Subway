@@ -8,8 +8,6 @@ declare module skins{
 	class CheckBoxSkin extends eui.Skin{
 	}
 }
-declare class EndScene extends eui.Skin{
-}
 declare class GameScene extends eui.Skin{
 }
 declare module skins{
@@ -23,6 +21,10 @@ declare module skins{
 declare module skins{
 	class ItemRendererSkin extends eui.Skin{
 	}
+}
+declare class MyButtonSkin extends eui.Skin{
+}
+declare class NewReturnButtonSkin extends eui.Skin{
 }
 declare module skins{
 	class PanelSkin extends eui.Skin{
@@ -46,6 +48,8 @@ declare module skins{
 	class TextInputSkin extends eui.Skin{
 	}
 }
+declare class EndScene extends eui.Skin{
+}
 declare module skins{
 	class ToggleSwitchSkin extends eui.Skin{
 	}
@@ -59,4 +63,6 @@ declare module skins{
 	}
 }
 declare class first extends eui.Skin{
+}
+declare class ware2 extends eui.Skin{
 }

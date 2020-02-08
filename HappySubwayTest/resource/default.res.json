@@ -1,20 +1,20 @@
 {
 	"groups": [
 		{
-			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,subway_jpg,Train,Gar,task,gear,beijin,Sprite,Task1,Bar,Task2,Task3,Que,back,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,warehouse,cangkuBak,title,C18,C17,C16,C15,C14,C13,C12,C11,C10,C5,C7,C6,C9,C4,C3,C8,C2,C1,chacha",
+			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,subway_jpg,Train,Gar,task,gear,beijin,Sprite,Task1,Bar,Task2,Task3,Que,back,warehouse,cangkuBak,title,18,17,16,15,14,13,12,11,10,5,7,6,9,4,3,8,2,1,chacha,left,right,Train2,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,cangku2,Tips",
 			"name": "preload"
 		},
 		{
-			"keys": "subway,Train,background,shelf,Gar,task,gear,beijin,Sprite,Task1,Bar,Task2,Task3,Que,back,warehouse,cangkuBak,title,chacha",
+			"keys": "subway,Train,background,shelf,Gar,task,gear,beijin,Sprite,Task1,Bar,Task2,Task3,Que,back,warehouse,cangkuBak,title,chacha,left,right,Train2,cangku2,Tips",
 			"name": "subway"
 		},
 		{
-			"keys": "1,10,11,12,13,14,15,16,17,18,2,3,4,5,6,7,8,9",
-			"name": "Train"
+			"keys": "9,8,7,6,5,4,3,2,18,17,16,15,14,13,12,11,10,1",
+			"name": "cangku"
 		},
 		{
-			"keys": "C9,C8,C7,C6,C5,C4,C3,C2,C18,C17,C16,C15,C14,C13,C12,C11,C10,C1",
-			"name": "cangku"
+			"keys": "29,28,27,26,25,24,23,45,44,43,42,41,40,22,39,38,37,36,35,34,33,32,31,30,21",
+			"name": "TrainGear2"
 		}
 	],
 	"resources": [
@@ -229,96 +229,6 @@
 			"name": "back"
 		},
 		{
-			"url": "assets/game/1.png",
-			"type": "image",
-			"name": "1"
-		},
-		{
-			"url": "assets/game/2.png",
-			"type": "image",
-			"name": "2"
-		},
-		{
-			"url": "assets/game/3.png",
-			"type": "image",
-			"name": "3"
-		},
-		{
-			"url": "assets/game/4.png",
-			"type": "image",
-			"name": "4"
-		},
-		{
-			"url": "assets/game/5.png",
-			"type": "image",
-			"name": "5"
-		},
-		{
-			"url": "assets/game/6.png",
-			"type": "image",
-			"name": "6"
-		},
-		{
-			"url": "assets/game/7.png",
-			"type": "image",
-			"name": "7"
-		},
-		{
-			"url": "assets/game/8.png",
-			"type": "image",
-			"name": "8"
-		},
-		{
-			"url": "assets/game/9.png",
-			"type": "image",
-			"name": "9"
-		},
-		{
-			"url": "assets/game/10.png",
-			"type": "image",
-			"name": "10"
-		},
-		{
-			"url": "assets/game/11.png",
-			"type": "image",
-			"name": "11"
-		},
-		{
-			"url": "assets/game/12.png",
-			"type": "image",
-			"name": "12"
-		},
-		{
-			"url": "assets/game/13.png",
-			"type": "image",
-			"name": "13"
-		},
-		{
-			"url": "assets/game/14.png",
-			"type": "image",
-			"name": "14"
-		},
-		{
-			"url": "assets/game/15.png",
-			"type": "image",
-			"name": "15"
-		},
-		{
-			"url": "assets/game/16.png",
-			"type": "image",
-			"name": "16"
-		},
-		{
-			"url": "assets/game/17.png",
-			"type": "image",
-			"name": "17"
-		},
-		{
-			"url": "assets/game/18.png",
-			"type": "image",
-			"name": "18"
-		},
-		{
 			"url": "assets/game/warehouse.png",
 			"type": "image",
 			"name": "warehouse"
@@ -336,97 +246,247 @@
 		{
 			"url": "assets/CangKu/C18.png",
 			"type": "image",
-			"name": "C18"
+			"name": "18"
 		},
 		{
 			"url": "assets/CangKu/C17.png",
 			"type": "image",
-			"name": "C17"
+			"name": "17"
 		},
 		{
 			"url": "assets/CangKu/C16.png",
 			"type": "image",
-			"name": "C16"
+			"name": "16"
 		},
 		{
 			"url": "assets/CangKu/C15.png",
 			"type": "image",
-			"name": "C15"
+			"name": "15"
 		},
 		{
 			"url": "assets/CangKu/C14.png",
 			"type": "image",
-			"name": "C14"
+			"name": "14"
 		},
 		{
 			"url": "assets/CangKu/C13.png",
 			"type": "image",
-			"name": "C13"
+			"name": "13"
 		},
 		{
 			"url": "assets/CangKu/C12.png",
 			"type": "image",
-			"name": "C12"
+			"name": "12"
 		},
 		{
 			"url": "assets/CangKu/C11.png",
 			"type": "image",
-			"name": "C11"
+			"name": "11"
 		},
 		{
 			"url": "assets/CangKu/C10.png",
 			"type": "image",
-			"name": "C10"
+			"name": "10"
 		},
 		{
 			"url": "assets/CangKu/C5.png",
 			"type": "image",
-			"name": "C5"
+			"name": "5"
 		},
 		{
 			"url": "assets/CangKu/C7.png",
 			"type": "image",
-			"name": "C7"
+			"name": "7"
 		},
 		{
 			"url": "assets/CangKu/C6.png",
 			"type": "image",
-			"name": "C6"
+			"name": "6"
 		},
 		{
 			"url": "assets/CangKu/C9.png",
 			"type": "image",
-			"name": "C9"
+			"name": "9"
 		},
 		{
 			"url": "assets/CangKu/C4.png",
 			"type": "image",
-			"name": "C4"
+			"name": "4"
 		},
 		{
 			"url": "assets/CangKu/C3.png",
 			"type": "image",
-			"name": "C3"
+			"name": "3"
 		},
 		{
 			"url": "assets/CangKu/C8.png",
 			"type": "image",
-			"name": "C8"
+			"name": "8"
 		},
 		{
 			"url": "assets/CangKu/C2.png",
 			"type": "image",
-			"name": "C2"
+			"name": "2"
 		},
 		{
 			"url": "assets/CangKu/C1.png",
 			"type": "image",
-			"name": "C1"
+			"name": "1"
 		},
 		{
 			"url": "assets/game/chacha.png",
 			"type": "image",
 			"name": "chacha"
+		},
+		{
+			"url": "assets/game/left.png",
+			"type": "image",
+			"name": "left"
+		},
+		{
+			"url": "assets/game/right.png",
+			"type": "image",
+			"name": "right"
+		},
+		{
+			"url": "assets/game/Train2.png",
+			"type": "image",
+			"name": "Train2"
+		},
+		{
+			"url": "assets/TrainGear2/1.png",
+			"type": "image",
+			"name": "21"
+		},
+		{
+			"url": "assets/TrainGear2/2.png",
+			"type": "image",
+			"name": "22"
+		},
+		{
+			"url": "assets/TrainGear2/3.png",
+			"type": "image",
+			"name": "23"
+		},
+		{
+			"url": "assets/TrainGear2/4.png",
+			"type": "image",
+			"name": "24"
+		},
+		{
+			"url": "assets/TrainGear2/5.png",
+			"type": "image",
+			"name": "25"
+		},
+		{
+			"url": "assets/TrainGear2/6.png",
+			"type": "image",
+			"name": "26"
+		},
+		{
+			"url": "assets/TrainGear2/7.png",
+			"type": "image",
+			"name": "27"
+		},
+		{
+			"url": "assets/TrainGear2/8.png",
+			"type": "image",
+			"name": "28"
+		},
+		{
+			"url": "assets/TrainGear2/9.png",
+			"type": "image",
+			"name": "29"
+		},
+		{
+			"url": "assets/TrainGear2/10.png",
+			"type": "image",
+			"name": "30"
+		},
+		{
+			"url": "assets/TrainGear2/11.png",
+			"type": "image",
+			"name": "31"
+		},
+		{
+			"url": "assets/TrainGear2/12.png",
+			"type": "image",
+			"name": "32"
+		},
+		{
+			"url": "assets/TrainGear2/13.png",
+			"type": "image",
+			"name": "33"
+		},
+		{
+			"url": "assets/TrainGear2/14.png",
+			"type": "image",
+			"name": "34"
+		},
+		{
+			"url": "assets/TrainGear2/15.png",
+			"type": "image",
+			"name": "35"
+		},
+		{
+			"url": "assets/TrainGear2/16.png",
+			"type": "image",
+			"name": "36"
+		},
+		{
+			"url": "assets/TrainGear2/17.png",
+			"type": "image",
+			"name": "37"
+		},
+		{
+			"url": "assets/TrainGear2/18.png",
+			"type": "image",
+			"name": "38"
+		},
+		{
+			"url": "assets/TrainGear2/19.png",
+			"type": "image",
+			"name": "39"
+		},
+		{
+			"url": "assets/TrainGear2/20.png",
+			"type": "image",
+			"name": "40"
+		},
+		{
+			"url": "assets/TrainGear2/21.png",
+			"type": "image",
+			"name": "41"
+		},
+		{
+			"url": "assets/TrainGear2/22.png",
+			"type": "image",
+			"name": "42"
+		},
+		{
+			"url": "assets/TrainGear2/23.png",
+			"type": "image",
+			"name": "43"
+		},
+		{
+			"url": "assets/TrainGear2/24.png",
+			"type": "image",
+			"name": "44"
+		},
+		{
+			"url": "assets/TrainGear2/25.png",
+			"type": "image",
+			"name": "45"
+		},
+		{
+			"url": "assets/game/cangku2.png",
+			"type": "image",
+			"name": "cangku2"
+		},
+		{
+			"url": "assets/game/Tips.png",
+			"type": "image",
+			"name": "Tips"
 		}
 	]
 }

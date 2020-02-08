@@ -28,11 +28,11 @@ var Tanchu2 = (function (_super) {
         this.spr.width = 640;
         this.spr.height = 1136;
         this.Back.touchEnabled = true;
-        this.Back.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTapqiehuan, this);
+        this.Back.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTapClose, this);
         //egret.localStorage.clear();
         this.everyDayLogin();
     };
-    Tanchu2.prototype.onTapqiehuan = function () {
+    Tanchu2.prototype.onTapClose = function () {
         SceneManager.Instance.closeScene();
     };
     //*******首登奖励********* */

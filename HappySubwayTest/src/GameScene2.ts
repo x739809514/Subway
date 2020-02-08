@@ -7,9 +7,10 @@ class GameScene2 extends Scene {
 	public t2:egret.Bitmap;//位图
 	public btn_tc:eui.Image;
 	public house:eui.Image;
-	public Seven:SevenDaysGift;
+	public W:WareHouse;
+	//public Seven:SevenDaysGift;
 	public a:string;
-	public s:number;
+	private s:number;
 	public G1:string;
 	public G2:string;
 	public G3:string;
@@ -40,7 +41,8 @@ class GameScene2 extends Scene {
         RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE,this.GO,this);
 		RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE,this.GO2,this);
         RES.loadConfig("resource/default.res.json","resource/");
-        RES.loadGroup("Train");
+        RES.loadGroup("cangku");
+		RES.loadGroup("subway");
 		
     }
 	
@@ -53,9 +55,29 @@ class GameScene2 extends Scene {
 		this.house.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onTaptc2,this)		
 	}
 	private onTapqiehuan() {
-		let s1:EndScene2 =  new EndScene2();
+		this.W=new WareHouse();
+		
+		if(this.W.Finish()==true){
+		let s1:ThirdScene = new ThirdScene();
 		//切换到最后的场景
         SceneManager.Instance.changeScene(s1);
+		}else{
+			var Tips=new egret.Bitmap();
+			Tips.texture=RES.getRes("Tips");
+			this.addChild(Tips);
+			Tips.x=571.64;
+			Tips.y=655.88;
+			Tips.scaleX=0.01;
+			Tips.scaleY=0.01;
+			Tips.alpha=0;
+			var Tween=egret.Tween.get(Tips);
+			Tween.to({x:244,y:492,scaleX:1,scaleY:1,alpha:1},100);
+			Tips.touchEnabled=true;
+			Tips.addEventListener(egret.TouchEvent.TOUCH_TAP,function(event:egret.Event){
+				this.removeChild(Tips);
+			},this);
+		}
+		
 	}
 	private onTaptc(){
         let tc:Tanchu2=new Tanchu2();
@@ -67,20 +89,20 @@ class GameScene2 extends Scene {
     }
 	//实现零件位移和渐变效果
 	public GO(){
-		//egret.localStorage.clear();
-		this.s=Math.floor(Math.random() * (18 - 1 + 1)) + 1;			//创建1-18之间的随机数字
-		this.a=this.s.toString();
+		//egret.localStorage.clear();	
 		var time=new Date();
 		var hour=time.getHours();
         var minutes=time.getMinutes();
 		if((hour>=8&&hour<10)||(hour>=16&&hour<18)||(hour>=20&&hour<22)){ //规定零件刷新时间，每天的（8-10），（16-18），（20-22）
+			this.s=Math.floor(Math.random() * (18 - 1 + 1)) + 1;			//创建1-18之间的随机数字
+		   	this.a=this.s.toString();
 			this.t=new egret.Bitmap();									//创建零件位图	
 			this.t.texture=RES.getRes(this.a);							//根据数字找到图片的编号
 			this.addChild(this.t);
 			this.t.x=Math.floor(Math.random() * (400 - 120 + 120)) + 120;
 			this.t.y=Math.floor(Math.random() * (350 - 150 + 150)) + 150;			
-			this.t.scaleX=0.1;
-			this.t.scaleY=0.1;
+			this.t.scaleX=0.2;
+			this.t.scaleY=0.2;
 			this.spr=new TweenMove();//TweenMove的实例
 			// this.spr.BitmapTest(this.t);
 			this.t.touchEnabled=true; //设置鼠标点击事件
@@ -93,7 +115,7 @@ class GameScene2 extends Scene {
 		this.s=Math.floor(Math.random() * (18 - 1 + 1)) + 1;			//创建1-18之间的随机数字
 		this.a=this.s.toString();
 		
-		if(parseInt(egret.localStorage.getItem("d1"))){ //规定零件刷新时间，每天的（8-10），（16-18），（20-22）
+		if(parseInt(egret.localStorage.getItem("d1"))==7){ //规定零件刷新时间，每天的（8-10），（16-18），（20-22）
 			this.t2=new egret.Bitmap();									//创建零件位图	
 			this.t2.texture=RES.getRes(this.a);							//根据数字找到图片的编号
 			this.addChild(this.t2);

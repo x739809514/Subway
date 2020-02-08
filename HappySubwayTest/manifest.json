@@ -12,18 +12,20 @@
 	"game": [
 		"bin-debug/Scene.js",
 		"bin-debug/AssetAdapter.js",
-		"bin-debug/GameScene2.js",
 		"bin-debug/LoadingUI.js",
 		"bin-debug/Main.js",
+		"bin-debug/MyNewButton.js",
 		"bin-debug/NewFile.js",
+		"bin-debug/NewReturnButton.js",
 		"bin-debug/ProgressBar.js",
-		"bin-debug/EndScene2.js",
+		"bin-debug/GameScene2.js",
 		"bin-debug/SceneManager.js",
-		"bin-debug/SevenDaysGift.js",
 		"bin-debug/StartScene.js",
 		"bin-debug/Tanchu2.js",
 		"bin-debug/ThemeAdapter.js",
+		"bin-debug/ThirdScene.js",
 		"bin-debug/TweenMove.js",
+		"bin-debug/WareHouse_2.js",
 		"bin-debug/WareHouse.js"
 	]
 }

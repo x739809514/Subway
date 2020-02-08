@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e:Skin class="TanChu" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+<e:Skin class="TanChu" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
 	<e:Image width="640" height="1136" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" source="beijin"/>
 	<e:Image width="600" height="225.67" x="20" y="56.64" anchorOffsetX="0" anchorOffsetY="0" source="Sprite"/>
 	<e:Image width="600" height="213.55" x="20" y="873.57" anchorOffsetX="0" anchorOffsetY="0" source="Sprite"/>
@@ -21,5 +21,5 @@
 	<e:Image width="129" height="115.46" x="54.27" y="646.37" anchorOffsetX="0" anchorOffsetY="0" source="Task3"/>
 	<e:Image width="139.69" height="100.31" x="241.55" y="895.95" anchorOffsetX="0" anchorOffsetY="0" source="Que"/>
 	<e:Label text="敬请期待！" x="241.55" y="1020.93" anchorOffsetX="0" width="216.42" anchorOffsetY="0" height="43.64" textColor="0x020202" fontFamily="Microsoft YaHei"/>
-	<e:Image id="Back" width="50.31" height="35.15" x="22.08" y="11.49" anchorOffsetX="0" anchorOffsetY="0" source="back"/>
+	<ns1:NewReturnButton id="Back" label="Button" x="22.39" y="9.64" skinName="NewReturnButtonSkin"/>
 </e:Skin>

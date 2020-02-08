@@ -1,7 +1,17 @@
 {
-  "global": {
-    "gridColor": 8421504,
-    "gridEnabled": false,
-    "gridSize": 20
-  }
+    "global": {
+        "gridColor": 8421504,
+        "gridEnabled": false,
+        "gridSize": 20
+    },
+    "17023563e69": {
+        "path": "MyButton.ts",
+        "class": "MyButton",
+        "parentPath": ""
+    },
+    "17023864414": {
+        "path": "NewReturnButton.ts",
+        "class": "NewReturnButton",
+        "parentPath": ""
+    }
 }

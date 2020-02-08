@@ -1,7 +1,7 @@
 // TypeScript file
   
 class Tanchu2 extends Scene{
-	public Back:eui.Image;
+	public Back:eui.Button;
 	public pBar:eui.ProgressBar;
 	public isFirst:any;
 	public a:string;
@@ -27,12 +27,12 @@ class Tanchu2 extends Scene{
 		this.spr.height=1136;
 
 		this.Back.touchEnabled=true;
-		this.Back.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onTapqiehuan,this);
+		this.Back.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onTapClose,this);
 		//egret.localStorage.clear();
 		 this.everyDayLogin();
 		
 	}
-	private onTapqiehuan(){
+	private onTapClose(){
 		
 		SceneManager.Instance.closeScene();
 	}
