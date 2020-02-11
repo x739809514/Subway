@@ -13,5 +13,8 @@ class json extends egret.DisplayObjectContainer{
         var data=RES.getRes("Trip_json");
         egret.localStorage.setItem('json',JSON.stringify(data['result']['page']['rows'][0]['in_station_name']));
         egret.localStorage.setItem('json2',JSON.stringify(data['result']['page']['total_count']));
+        var data2=RES.getRes("User_json");
+        egret.localStorage.setItem('id',JSON.stringify(data2['result']['user']['user_id']));
+        egret.localStorage.setItem('yonghu',JSON.stringify(data2['result']['user']['user_name']));
     }
 }

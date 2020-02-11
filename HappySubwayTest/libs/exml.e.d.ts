@@ -10,6 +10,8 @@ declare module skins{
 }
 declare class GameScene extends eui.Skin{
 }
+declare class GongYi extends eui.Skin{
+}
 declare module skins{
 	class HScrollBarSkin extends eui.Skin{
 	}

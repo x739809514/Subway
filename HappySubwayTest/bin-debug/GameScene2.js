@@ -31,6 +31,8 @@ var GameScene2 = (function (_super) {
         RES.loadGroup("subway");
     };
     GameScene2.prototype.onComplete = function () {
+        this.shelf.touchEnabled = true;
+        this.shelf.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTaptc3, this);
         this.btn_qh3.touchEnabled = true;
         this.btn_qh3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTapqiehuan, this);
         this.btn_tc.touchEnabled = true;
@@ -69,6 +71,10 @@ var GameScene2 = (function (_super) {
     GameScene2.prototype.onTaptc2 = function () {
         var tc2 = new WareHouse();
         SceneManager.Instance.pushScene(tc2);
+    };
+    GameScene2.prototype.onTaptc3 = function () {
+        var tc3 = new shelf();
+        SceneManager.Instance.pushScene(tc3);
     };
     //实现零件位移和渐变效果
     GameScene2.prototype.GO = function () {

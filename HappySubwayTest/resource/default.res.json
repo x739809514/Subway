@@ -1,11 +1,11 @@
 {
 	"groups": [
 		{
-			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,description_json,subway_jpg,Train,Gar,task,gear,beijin,Sprite,Task1,Bar,Task2,Task3,Que,back,warehouse,cangkuBak,title,18,17,16,15,14,13,12,11,10,5,7,6,9,4,3,8,2,1,chacha,left,right,Train2,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,cangku2,Tips",
+			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,description_json,subway_jpg,Train,Gar,task,gear,beijin,Sprite,Task1,Bar,Task2,Task3,Que,back,warehouse,cangkuBak,title,18,17,16,15,14,13,12,11,10,5,7,6,9,4,3,8,2,1,chacha,left,right,Train2,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,cangku2,Tips,gongyi,bar2,duihuanquan",
 			"name": "preload"
 		},
 		{
-			"keys": "subway,Train,background,shelf,Gar,task,gear,beijin,Sprite,Task1,Bar,Task2,Task3,Que,back,warehouse,cangkuBak,title,chacha,left,right,Train2,cangku2,Tips",
+			"keys": "subway,Train,background,shelf,Gar,task,gear,beijin,Sprite,Task1,Bar,Task2,Task3,Que,back,warehouse,cangkuBak,title,chacha,left,right,Train2,cangku2,Tips,gongyi",
 			"name": "subway"
 		},
 		{
@@ -19,6 +19,10 @@
 		{
 			"keys": "Trip_json,User_json",
 			"name": "data"
+		},
+		{
+			"keys": "duihuanquan,bar2",
+			"name": "subway2"
 		}
 	],
 	"resources": [
@@ -491,6 +495,21 @@
 			"url": "assets/JSON/User.json",
 			"type": "json",
 			"name": "User_json"
+		},
+		{
+			"url": "assets/game/gongyi.png",
+			"type": "image",
+			"name": "gongyi"
+		},
+		{
+			"url": "assets/game/bar2.png",
+			"type": "image",
+			"name": "bar2"
+		},
+		{
+			"url": "assets/game/duihuanquan.png",
+			"type": "image",
+			"name": "duihuanquan"
 		}
 	]
 }

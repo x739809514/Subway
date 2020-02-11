@@ -15,7 +15,7 @@ class EditText extends eui.Group {
         //将背景添加到显示列表
         this.addChild(this.background);                                    
         //指定默认文本，用户可以自己输入，也可以将其删除
-        this.myEditableText.text = "my EditableText";
+        //this.myEditableText.text = "my EditableText";
         //指定文本的颜色。
         this.myEditableText.textColor = 0x2233cc;                          
         //指定我们的文本输入框的宽和高    
@@ -25,7 +25,7 @@ class EditText extends eui.Group {
         this.myEditableText.left = 0;            
         this.myEditableText.displayAsPassword = false; 
         //表示文本字段是否按单词换行。如果值为 true，则该文本字段按单词换行；反之则该文本字段按字符换行。
-        this.myEditableText.wordWrap = true;                                     
+        this.myEditableText.wordWrap = false;                                     
         //添加监听，监听用户的输入
         this.myEditableText.addEventListener(egret.Event.CHANGE,this.onChang,this);
         // this.myEditableText.x=400;
@@ -37,7 +37,8 @@ class EditText extends eui.Group {
     public myEditableText:eui.EditableText = new eui.EditableText();
 
     public onChang(e:egret.Event){
-        egret.log(e.target.text);
+        var x=this.myEditableText.text;
+        egret.log(x);
     }
 
 

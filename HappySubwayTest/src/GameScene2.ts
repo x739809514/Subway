@@ -8,6 +8,7 @@ class GameScene2 extends Scene {
 	public t3:egret.Bitmap;
 	public btn_tc:eui.Image;
 	public house:eui.Image;
+	public shelf:eui.Image;
 	public W:WareHouse;
 	public js:json;
 	public a:string;
@@ -49,12 +50,15 @@ class GameScene2 extends Scene {
     }
 	
 	protected onComplete() {
+		this.shelf.touchEnabled = true;
+		this.shelf.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTaptc3, this);
 		this.btn_qh3.touchEnabled = true;
 		this.btn_qh3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTapqiehuan, this);
 		this.btn_tc.touchEnabled=true;
 		this.btn_tc.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onTaptc,this);
 		this.house.touchEnabled=true;
-		this.house.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onTaptc2,this)		
+		this.house.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onTaptc2,this);
+
 	}
 	private onTapqiehuan() {
 		this.W=new WareHouse();
@@ -88,6 +92,10 @@ class GameScene2 extends Scene {
 	private onTaptc2(){
         let tc2:WareHouse=new WareHouse();
         SceneManager.Instance.pushScene(tc2);
+    }
+	private onTaptc3(){
+        let tc3:shelf=new shelf();
+        SceneManager.Instance.pushScene(tc3);
     }
 	//实现零件位移和渐变效果
 	public GO(){

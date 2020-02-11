@@ -31,7 +31,7 @@ var EditText = (function (_super) {
         //将背景添加到显示列表
         _this.addChild(_this.background);
         //指定默认文本，用户可以自己输入，也可以将其删除
-        _this.myEditableText.text = "my EditableText";
+        //this.myEditableText.text = "my EditableText";
         //指定文本的颜色。
         _this.myEditableText.textColor = 0x2233cc;
         //指定我们的文本输入框的宽和高    
@@ -41,7 +41,7 @@ var EditText = (function (_super) {
         _this.myEditableText.left = 0;
         _this.myEditableText.displayAsPassword = false;
         //表示文本字段是否按单词换行。如果值为 true，则该文本字段按单词换行；反之则该文本字段按字符换行。
-        _this.myEditableText.wordWrap = true;
+        _this.myEditableText.wordWrap = false;
         //添加监听，监听用户的输入
         _this.myEditableText.addEventListener(egret.Event.CHANGE, _this.onChang, _this);
         // this.myEditableText.x=400;
@@ -51,7 +51,8 @@ var EditText = (function (_super) {
         return _this;
     }
     EditText.prototype.onChang = function (e) {
-        egret.log(e.target.text);
+        var x = this.myEditableText.text;
+        egret.log(x);
     };
     return EditText;
 }(eui.Group));
