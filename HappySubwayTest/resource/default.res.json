@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,bg_jpg,egret_icon_png,description_json,subway_jpg,Train,Gar,task,gear,beijin,Sprite,Task1,Bar,Task2,Task3,Que,back,warehouse,cangkuBak,title,18,17,16,15,14,13,12,11,10,5,7,6,9,4,3,8,2,1,chacha,left,right,Train2,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,cangku2,Tips",
+			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,description_json,subway_jpg,Train,Gar,task,gear,beijin,Sprite,Task1,Bar,Task2,Task3,Que,back,warehouse,cangkuBak,title,18,17,16,15,14,13,12,11,10,5,7,6,9,4,3,8,2,1,chacha,left,right,Train2,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,cangku2,Tips",
 			"name": "preload"
 		},
 		{
@@ -15,6 +15,10 @@
 		{
 			"keys": "29,28,27,26,25,24,23,45,44,43,42,41,40,22,39,38,37,36,35,34,33,32,31,30,21",
 			"name": "TrainGear2"
+		},
+		{
+			"keys": "Trip_json,User_json",
+			"name": "data"
 		}
 	],
 	"resources": [
@@ -132,16 +136,6 @@
 			"url": "assets/ScrollBar/track_sb.png",
 			"type": "image",
 			"name": "track_sb_png"
-		},
-		{
-			"url": "assets/bg.jpg",
-			"type": "image",
-			"name": "bg_jpg"
-		},
-		{
-			"url": "assets/egret_icon.png",
-			"type": "image",
-			"name": "egret_icon_png"
 		},
 		{
 			"url": "config/description.json",
@@ -487,6 +481,16 @@
 			"url": "assets/game/Tips.png",
 			"type": "image",
 			"name": "Tips"
+		},
+		{
+			"url": "assets/JSON/Trip.json",
+			"type": "json",
+			"name": "Trip_json"
+		},
+		{
+			"url": "assets/JSON/User.json",
+			"type": "json",
+			"name": "User_json"
 		}
 	]
 }

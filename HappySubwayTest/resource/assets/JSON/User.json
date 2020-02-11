@@ -1,0 +1,23 @@
+{
+  "errcode": "0000",
+  "errmsg": null,
+  "result": {
+    "user": {
+      "user_id": "1",
+      "user_name": "张小明",
+      "sex": 1,
+      "mobile_phone": "13012345678",
+      "profession": "文员",
+      "id_no": "320205199003079673",
+      "id_type": 1,
+      "user_image_path": "",
+      "nickname": "小明",
+      "city_id": "3202",
+      "real_name_reg": 0,
+      "real_name_auth": 0,
+      "real_name_chk": 0,
+      "real_name_open": 0
+    },
+    "token": null
+  }
+}
