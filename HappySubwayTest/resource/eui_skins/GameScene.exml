@@ -3,7 +3,7 @@
 	<e:Image width="640" height="1136" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" source="background"/>
 	<e:Image width="761.21" height="379.09" x="0" y="756.91" anchorOffsetX="0" anchorOffsetY="0" source="Train"/>
 	<e:Image id="shelf" width="68.49" height="97.27" x="533.58" y="125.63" anchorOffsetX="0" anchorOffsetY="0" source="shelf"/>
-	<e:Image width="76.06" height="92.73" x="533.58" y="293.9" anchorOffsetX="0" anchorOffsetY="0" source="Gar"/>
+	<e:Image id="Game" width="76.06" height="92.73" x="533.58" y="293.9" anchorOffsetX="0" anchorOffsetY="0" source="Gar"/>
 	<e:Image id="btn_tc" width="68.48" height="91.21" x="39.83" y="966.54" anchorOffsetX="0" anchorOffsetY="0" source="task"/>
 	<e:Image id="house" width="88" height="85.34" x="523.82" y="446.66" anchorOffsetX="0" anchorOffsetY="0" source="warehouse"/>
 	<e:Image id="btn_qh3" width="50.66" height="56" x="571.61" y="655.88" anchorOffsetX="0" anchorOffsetY="0" source="right"/>

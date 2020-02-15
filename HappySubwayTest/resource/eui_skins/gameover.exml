@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="gameover" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect width="513.93" height="409.39" x="63.04" y="363.3" anchorOffsetX="0" anchorOffsetY="0" fillColor="0xf4cdf4"/>
+	<e:Image id="GOver" width="210.91" height="110.91" x="214.55" y="613.68" anchorOffsetX="0" anchorOffsetY="0" source="Snake_Over"/>
+	<e:Label text="您已获得：" x="82" y="383" textColor="0x000000" fontFamily="Microsoft YaHei" anchorOffsetX="0" width="216.98" anchorOffsetY="0" height="60.31" size="40"/>
+</e:Skin>

@@ -17,6 +17,7 @@ var GameScene2 = (function (_super) {
     __extends(GameScene2, _super);
     function GameScene2() {
         var _this = _super.call(this) || this;
+        _this.TanC = new Tanchu2();
         _this.skinName = "resource/eui_skins/GameScene.exml";
         _this.addEventListener(egret.Event.ADDED_TO_STAGE, _this.onAddToStage, _this);
         return _this;
@@ -39,6 +40,12 @@ var GameScene2 = (function (_super) {
         this.btn_tc.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTaptc, this);
         this.house.touchEnabled = true;
         this.house.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTaptc2, this);
+        this.Game.touchEnabled = true;
+        this.Game.addEventListener(egret.TouchEvent.TOUCH_TAP, this.GameGO, this);
+    };
+    GameScene2.prototype.GameGO = function () {
+        this.Gsub = new SnakeGO();
+        this.addChild(this.Gsub);
     };
     GameScene2.prototype.onTapqiehuan = function () {
         this.W = new WareHouse();
@@ -78,31 +85,51 @@ var GameScene2 = (function (_super) {
     };
     //实现零件位移和渐变效果
     GameScene2.prototype.GO = function () {
-        //egret.localStorage.clear();	
+        //egret.localStorage.clear();
+        if (this.TanC.ProBar() == true) {
+            egret.localStorage.removeItem("NUMBER");
+        }
         var time = new Date();
         var hour = time.getHours();
         var minutes = time.getMinutes();
+        if (egret.localStorage.getItem("NUMBER")) {
+            this.NUMber = parseInt(egret.localStorage.getItem("NUMBER"));
+        }
+        else {
+            this.NUMber = 0;
+        }
         if ((hour >= 8 && hour < 10) || (hour >= 16 && hour < 18) || (hour >= 20 && hour < 22)) {
-            this.s = Math.floor(Math.random() * (18 - 1 + 1)) + 1; //创建1-18之间的随机数字
-            this.a = this.s.toString();
-            this.t = new egret.Bitmap(); //创建零件位图	
-            this.t.texture = RES.getRes(this.a); //根据数字找到图片的编号
-            this.addChild(this.t);
-            this.t.x = Math.floor(Math.random() * (400 - 120 + 120)) + 120;
-            this.t.y = Math.floor(Math.random() * (350 - 150 + 150)) + 150;
-            this.t.scaleX = 0.2;
-            this.t.scaleY = 0.2;
-            this.spr = new TweenMove(); //TweenMove的实例
-            // this.spr.BitmapTest(this.t);
-            this.t.touchEnabled = true; //设置鼠标点击事件
-            this.t.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Move, this);
+            if (this.NUMber == 0) {
+                this.s = Math.floor(Math.random() * (18 - 1 + 1)) + 1; //创建1-18之间的随机数字
+                this.a = this.s.toString();
+                this.t = new egret.Bitmap(); //创建零件位图	
+                this.t.texture = RES.getRes(this.a); //根据数字找到图片的编号
+                this.addChild(this.t);
+                this.t.x = Math.floor(Math.random() * (400 - 120 + 120)) + 120;
+                this.t.y = Math.floor(Math.random() * (350 - 150 + 150)) + 150;
+                this.t.scaleX = 0.2;
+                this.t.scaleY = 0.2;
+                this.spr = new TweenMove(); //TweenMove的实例
+                // this.spr.BitmapTest(this.t);
+                this.t.touchEnabled = true; //设置鼠标点击事件
+                this.t.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Move, this);
+            }
         }
     };
     GameScene2.prototype.GO2 = function () {
         //egret.localStorage.clear();
-        this.s = Math.floor(Math.random() * (18 - 1 + 1)) + 1; //创建1-18之间的随机数字
-        this.a = this.s.toString();
+        if (this.TanC.ProBar() == true) {
+            egret.localStorage.removeItem("NUMber1");
+        }
+        if (egret.localStorage.getItem("NUMBER1")) {
+            this.NUMber1 = parseInt(egret.localStorage.getItem("NUMBER1"));
+        }
+        else {
+            this.NUMber1 = 0;
+        }
         if ((parseInt(egret.localStorage.getItem("d1")) == 7) || (this.data() == true)) {
+            this.s = Math.floor(Math.random() * (18 - 1 + 1)) + 1; //创建1-18之间的随机数字
+            this.a = this.s.toString();
             this.t2 = new egret.Bitmap(); //创建零件位图	
             this.t2.texture = RES.getRes(this.a); //根据数字找到图片的编号
             this.addChild(this.t2);
@@ -118,9 +145,18 @@ var GameScene2 = (function (_super) {
     };
     GameScene2.prototype.GO3 = function () {
         //egret.localStorage.clear();
-        this.s = Math.floor(Math.random() * (18 - 1 + 1)) + 1; //创建1-18之间的随机数字
-        this.a = this.s.toString();
+        if (this.TanC.ProBar() == true) {
+            egret.localStorage.removeItem("NUMBER2");
+        }
+        if (egret.localStorage.getItem("NUMBER2")) {
+            this.NUMber2 = parseInt(egret.localStorage.getItem("NUMBER2"));
+        }
+        else {
+            this.NUMber2 = 0;
+        }
         if (this.data2() == true) {
+            this.s = Math.floor(Math.random() * (18 - 1 + 1)) + 1; //创建1-18之间的随机数字
+            this.a = this.s.toString();
             this.s = Math.floor(Math.random() * (18 - 1 + 1)) + 1; //创建1-18之间的随机数字
             this.a = this.s.toString();
             this.t3 = new egret.Bitmap(); //创建零件位图	
@@ -157,6 +193,10 @@ var GameScene2 = (function (_super) {
     };
     GameScene2.prototype.Move = function (event) {
         this.spr.TouchMove(this.t); //调用TweenMove类中的动作函数
+        var N = parseInt(egret.localStorage.getItem("NUMBER"));
+        N = N + 1;
+        var M = N.toString();
+        egret.localStorage.setItem("NUMBER", M);
         //egret.localStorage.clear();	
         if (this.s == 1) {
             if (egret.localStorage.getItem("g1")) {
@@ -377,6 +417,10 @@ var GameScene2 = (function (_super) {
     };
     GameScene2.prototype.Move2 = function (event) {
         this.spr.TouchMove(this.t2); //调用TweenMove类中的动作函数
+        var N2 = parseInt(egret.localStorage.getItem("NUMBER1"));
+        N2 = N2 + 1;
+        var M2 = N2.toString();
+        egret.localStorage.setItem("NUMBER1", M2);
         //egret.localStorage.clear();	
         if (this.s == 1) {
             if (egret.localStorage.getItem("g1")) {
@@ -597,6 +641,10 @@ var GameScene2 = (function (_super) {
     };
     GameScene2.prototype.Move3 = function (event) {
         this.spr.TouchMove(this.t3); //调用TweenMove类中的动作函数
+        var N3 = parseInt(egret.localStorage.getItem("NUMBER2"));
+        N3 = N3 + 1;
+        var M3 = N3.toString();
+        egret.localStorage.setItem("NUMBER2", M3);
         //egret.localStorage.clear();	
         if (this.s == 1) {
             if (egret.localStorage.getItem("g1")) {

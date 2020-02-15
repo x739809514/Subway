@@ -66,5 +66,7 @@ declare module skins{
 }
 declare class first extends eui.Skin{
 }
+declare class gameover extends eui.Skin{
+}
 declare class ware2 extends eui.Skin{
 }

@@ -11,7 +11,9 @@
 	],
 	"game": [
 		"bin-debug/Scene.js",
-		"bin-debug/AssetAdapter.js",
+		"bin-debug/WareHouse.js",
+		"bin-debug/food.js",
+		"bin-debug/gameover2.js",
 		"bin-debug/GameScene2.js",
 		"bin-debug/json.js",
 		"bin-debug/LoadingUI.js",
@@ -19,15 +21,17 @@
 		"bin-debug/MyNewButton.js",
 		"bin-debug/NewReturnButton.js",
 		"bin-debug/ProgressBar.js",
-		"bin-debug/EditText.js",
+		"bin-debug/AssetAdapter.js",
 		"bin-debug/SceneManager.js",
 		"bin-debug/shelf.js",
+		"bin-debug/snake.js",
+		"bin-debug/SnakeGO.js",
 		"bin-debug/StartScene.js",
 		"bin-debug/Tanchu2.js",
 		"bin-debug/ThemeAdapter.js",
 		"bin-debug/ThirdScene.js",
 		"bin-debug/TweenMove.js",
 		"bin-debug/WareHouse_2.js",
-		"bin-debug/WareHouse.js"
+		"bin-debug/EditText.js"
 	]
 }

@@ -80,12 +80,19 @@ class Tanchu2 extends Scene{
         egret.log("是否是首次登陆？？？？" + this.isFirst)
         if (this.isFirst) {    
          //是首次登陆
-		 this.initProgressBar();
-		 
+		 this.initProgressBar();		  
         }else{
+			
 			this.saveProgressBar();
 		}
     }
+	public ProBar():Boolean{
+		if(this.isFirst==true){
+			return true;
+		}else{
+			return false;
+		}
+	}
 	private initProgressBar():void{
 		this.pBar = new eui.ProgressBar();
 		this.pBar.maximum = 7;//设置进度条的最大值

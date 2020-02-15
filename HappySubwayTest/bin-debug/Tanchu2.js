@@ -86,6 +86,14 @@ var Tanchu2 = (function (_super) {
             this.saveProgressBar();
         }
     };
+    Tanchu2.prototype.ProBar = function () {
+        if (this.isFirst == true) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
     Tanchu2.prototype.initProgressBar = function () {
         this.pBar = new eui.ProgressBar();
         this.pBar.maximum = 7; //设置进度条的最大值

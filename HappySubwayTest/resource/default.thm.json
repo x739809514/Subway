@@ -39,6 +39,7 @@
     "resource/eui_skins/VScrollBarSkin.exml",
     "resource/eui_skins/VSliderSkin.exml",
     "resource/eui_skins/first.exml",
+    "resource/eui_skins/gameover.exml",
     "resource/eui_skins/ware2.exml"
   ]
 }
