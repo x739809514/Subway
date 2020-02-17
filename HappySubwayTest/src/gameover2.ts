@@ -43,6 +43,7 @@ class gameover2 extends Scene{
     private GameOver(){
         let s1:GameScene2=new GameScene2();
         SceneManager.Instance.changeScene(s1);
+		egret.localStorage.removeItem('snake');
     }
     private Gift(){
         this.gift=parseInt(egret.localStorage.getItem('snake'));

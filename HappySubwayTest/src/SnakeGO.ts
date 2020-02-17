@@ -15,6 +15,10 @@ class SnakeGO extends egret.DisplayObjectContainer {
     private radius = 30;
     private textCount: egret.TextField;
     private textTimer: egret.TextField;
+    private hit_up:egret.Shape;
+    private hit_low:egret.Shape;
+    private hit_left:egret.Shape;
+    private hit_right:egret.Shape;
 
     /**
      * 创建游戏场景
@@ -32,12 +36,55 @@ class SnakeGO extends egret.DisplayObjectContainer {
         bg.graphics.endFill();
         this.addChild(bg);
 
+        //游戏边界
+        //上界
+        this.hit_up=new egret.Shape();
+        this.hit_up.graphics.beginFill(0xffffff);
+        this.hit_up.graphics.drawRect(0,0,this.stageW,0.0001);
+        this.hit_up.graphics.endFill();
+        this.hit_up.x=0;
+        this.hit_up.y=0;
+        this.hit_up.width=this.stageW;
+        this.hit_up.height=0.0001;
+        this.addChild(this.hit_up);
+        //下界
+        this.hit_low=new egret.Shape();
+        this.hit_low.graphics.beginFill(0xffffff);
+        this.hit_low.graphics.drawRect(0,this.stageH,this.stageW,0.0001);
+        this.hit_low.graphics.endFill();
+        this.hit_low.x=0;
+        this.hit_low.y=this.stageH;
+        this.hit_low.width=this.stageW;
+        this.hit_low.height=0.0001;
+        this.addChild(this.hit_low);
+        //左界
+        this.hit_left=new egret.Shape();
+        this.hit_left.graphics.beginFill(0xffffff);
+        this.hit_left.graphics.drawRect(0,0,0.0001,this.stageH);
+        this.hit_left.graphics.endFill();
+        this.hit_left.x=0;
+        this.hit_left.y=0;
+        this.hit_left.width=0.0001;
+        this.hit_left.height=this.stageH;
+        this.addChild(this.hit_left);
+        //右界
+        this.hit_right=new egret.Shape();
+        this.hit_right.graphics.beginFill(0xffffff);
+        this.hit_right.graphics.drawRect(this.stageW,0,0.0001,this.stageH);
+        this.hit_right.x=this.stageW;
+        this.hit_right.y=0;
+        this.hit_right.width=0.0001;
+        this.hit_right.height=this.stageH;
+        this.addChild(this.hit_right);
+
+        //计分
         this.textCount = new egret.TextField();
         this.textCount.textColor = 0xffffff;
         this.textCount.x = 150;
         this.textCount.y = 100;
         this.textCount.text = "分数：0";
 
+        //倒计时
         this.textTimer = new egret.TextField();
         this.textTimer.textColor = 0xffffff;
         this.textTimer.x = 400;
@@ -112,11 +159,20 @@ class SnakeGO extends egret.DisplayObjectContainer {
 
     private onTimer(e: egret.TimerEvent) {
         this.head = this.snake.getHead();
+        //检测贪吃蛇和食物的碰撞
         if (this.hit(this.head, this.food)){
             this.onEat();
             this.textCount.text = "分数:" + (++this.count);
             egret.localStorage.setItem('snake',this.count.toString());
         }
+        //检测贪吃蛇和边界的碰撞
+        if(this.hit(this.head,this.hit_up)||this.hit(this.head,this.hit_low)||this.hit(this.head,this.hit_left)||this.hit(this.head,this.hit_right)){
+            this.timer.stop();
+            this.removeChild(this.snake);
+            let s:gameover2=new gameover2();
+            SceneManager.Instance.pushScene(s);
+        }
+
         this.snake.move(this.moveEvent, this.during);
         ++this.sum;
         if((this.sum%20)==0){      
@@ -137,4 +193,5 @@ class SnakeGO extends egret.DisplayObjectContainer {
         return (new egret.Rectangle(a.x + this.snake.x, a.y + this.snake.y, a.width, a.height))
             .intersects(new egret.Rectangle(b.x, b.y, b.width, b.height));
     }
+
 }

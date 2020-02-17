@@ -32,6 +32,7 @@ var gameover2 = (function (_super) {
     gameover2.prototype.GameOver = function () {
         var s1 = new GameScene2();
         SceneManager.Instance.changeScene(s1);
+        egret.localStorage.removeItem('snake');
     };
     gameover2.prototype.Gift = function () {
         this.gift = parseInt(egret.localStorage.getItem('snake'));
