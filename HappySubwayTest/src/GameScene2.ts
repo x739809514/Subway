@@ -75,8 +75,7 @@ class GameScene2 extends Scene {
 	}
 	private onTapqiehuan() {
 		this.W=new WareHouse();
-		
-		if(this.W.Finish()==true){
+		if(this.W.Finish()==true){ 
 		let s1:ThirdScene = new ThirdScene();
 		//切换到最后的场景
         SceneManager.Instance.changeScene(s1);
@@ -112,7 +111,7 @@ class GameScene2 extends Scene {
     }
 	//实现零件位移和渐变效果
 	public GO(){
-		//egret.localStorage.clear();
+			//egret.localStorage.clear();
 			if(this.TanC.ProBar()==true){
 				egret.localStorage.removeItem("NUMBER");
 			}
@@ -159,19 +158,22 @@ class GameScene2 extends Scene {
 
 		
 		if((parseInt(egret.localStorage.getItem("d1"))==7)||(this.data()==true)){ //规定零件刷新时间，每天的（8-10），（16-18），（20-22）
-			this.s=Math.floor(Math.random() * (18 - 1 + 1)) + 1;			//创建1-18之间的随机数字
-			this.a=this.s.toString();
-			this.t2=new egret.Bitmap();									//创建零件位图	
-			this.t2.texture=RES.getRes(this.a);							//根据数字找到图片的编号
-			this.addChild(this.t2);
-			this.t2.x=Math.floor(Math.random() * (400 - 120 + 120)) + 120;
-			this.t2.y=Math.floor(Math.random() * (350 - 150 + 150)) + 150;			
-			this.t2.scaleX=0.2;
-			this.t2.scaleY=0.2;
-			this.spr=new TweenMove();//TweenMove的实例
-			// this.spr.BitmapTest(this.t);
-			this.t2.touchEnabled=true; //设置鼠标点击事件
-			this.t2.addEventListener(egret.TouchEvent.TOUCH_TAP,this.Move2,this);
+			if(this.NUMber1==0){
+				this.s=Math.floor(Math.random() * (18 - 1 + 1)) + 1;			//创建1-18之间的随机数字
+				this.a=this.s.toString();
+				this.t2=new egret.Bitmap();									//创建零件位图	
+				this.t2.texture=RES.getRes(this.a);							//根据数字找到图片的编号
+				this.addChild(this.t2);
+				this.t2.x=Math.floor(Math.random() * (400 - 120 + 120)) + 120;
+				this.t2.y=Math.floor(Math.random() * (350 - 150 + 150)) + 150;			
+				this.t2.scaleX=0.2;
+				this.t2.scaleY=0.2;
+				this.spr=new TweenMove();//TweenMove的实例
+				// this.spr.BitmapTest(this.t);
+				this.t2.touchEnabled=true; //设置鼠标点击事件
+				this.t2.addEventListener(egret.TouchEvent.TOUCH_TAP,this.Move2,this);
+			}
+			
 		} 
 	}
 	public GO3(){
@@ -186,25 +188,29 @@ class GameScene2 extends Scene {
 			}	
 		
 		if(this.data2()==true){ //规定零件刷新时间，每天的（8-10），（16-18），（20-22）
-			this.s=Math.floor(Math.random() * (18 - 1 + 1)) + 1;			//创建1-18之间的随机数字
-			this.a=this.s.toString();
-			this.s=Math.floor(Math.random() * (18 - 1 + 1)) + 1;			//创建1-18之间的随机数字
-			this.a=this.s.toString();
-			this.t3=new egret.Bitmap();									//创建零件位图	
-			this.t3.texture=RES.getRes(this.a);							//根据数字找到图片的编号
-			this.addChild(this.t3);
-			this.t3.x=Math.floor(Math.random() * (400 - 120 + 120)) + 120;
-			this.t3.y=Math.floor(Math.random() * (350 - 150 + 150)) + 150;			
-			this.t3.scaleX=0.2;
-			this.t3.scaleY=0.2;
-			this.spr=new TweenMove();//TweenMove的实例
-			// this.spr.BitmapTest(this.t);
-			this.t3.touchEnabled=true; //设置鼠标点击事件
-			this.t3.addEventListener(egret.TouchEvent.TOUCH_TAP,this.Move3,this);
+			if(this.NUMber2==0){
+				this.s=Math.floor(Math.random() * (18 - 1 + 1)) + 1;			//创建1-18之间的随机数字
+				this.a=this.s.toString();
+				this.s=Math.floor(Math.random() * (18 - 1 + 1)) + 1;			//创建1-18之间的随机数字
+				this.a=this.s.toString();
+				this.t3=new egret.Bitmap();									//创建零件位图	
+				this.t3.texture=RES.getRes(this.a);							//根据数字找到图片的编号
+				this.addChild(this.t3);
+				this.t3.x=Math.floor(Math.random() * (400 - 120 + 120)) + 120;
+				this.t3.y=Math.floor(Math.random() * (350 - 150 + 150)) + 150;			
+				this.t3.scaleX=0.2;
+				this.t3.scaleY=0.2;
+				this.spr=new TweenMove();//TweenMove的实例
+				// this.spr.BitmapTest(this.t);
+				this.t3.touchEnabled=true; //设置鼠标点击事件
+				this.t3.addEventListener(egret.TouchEvent.TOUCH_TAP,this.Move3,this);
+			}
+			
 		} 
 	}
 	public data():boolean {
-        var data2 = JSON.parse(<string>egret.localStorage.getItem('json'));
+		
+        var data2 ="南湖家园" //JSON.parse(<string>egret.localStorage.getItem('json'));
         if(data2=="南湖家园"){
            return true;
         }else {
@@ -212,7 +218,8 @@ class GameScene2 extends Scene {
         }
     }
 	public data2():boolean {	
-        var data3 = JSON.parse(<string>egret.localStorage.getItem('json2'));
+		
+        var data3 ="15"// JSON.parse(<string>egret.localStorage.getItem('json2'));
 		console.log(data3);
 		if(parseInt(data3)>=10){
 		   return true;

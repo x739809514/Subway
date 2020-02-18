@@ -17,6 +17,7 @@ var ThirdScene = (function (_super) {
     __extends(ThirdScene, _super);
     function ThirdScene() {
         var _this = _super.call(this) || this;
+        _this.TanC = new Tanchu2();
         _this.skinName = "resource/eui_skins/ThirdScene.exml";
         _this.addEventListener(egret.Event.ADDED_TO_STAGE, _this.onAddToStage, _this);
         return _this;
@@ -36,8 +37,12 @@ var ThirdScene = (function (_super) {
         this.btn_tc.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTaptc, this);
         this.house_2.touchEnabled = true;
         this.house_2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTaptc2, this);
-        // this.Left.touchEnabled = true;
-        // this.Left.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTapClose, this);
+        this.Game2.touchEnabled = true;
+        this.Game2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.GameGO, this);
+    };
+    ThirdScene.prototype.GameGO = function () {
+        this.Gsub = new SnakeGO();
+        this.addChild(this.Gsub);
     };
     ThirdScene.prototype.onTapqiehuan = function () {
         var s1 = new ThirdScene();
@@ -59,61 +64,92 @@ var ThirdScene = (function (_super) {
     //实现零件位移和渐变效果
     ThirdScene.prototype.GO = function () {
         //egret.localStorage.clear();
-        this.s = Math.round(Math.random() * (45 - 21)) + 21; //创建45-21之间的随机数字
-        this.a = this.s.toString();
+        if (this.TanC.ProBar() == true) {
+            egret.localStorage.removeItem("NUMBER");
+        }
         var time = new Date();
         var hour = time.getHours();
         var minutes = time.getMinutes();
+        if (egret.localStorage.getItem("NUMBER")) {
+            this.NUMber = parseInt(egret.localStorage.getItem("NUMBER"));
+        }
+        else {
+            this.NUMber = 0;
+        }
         if ((hour >= 8 && hour < 13) || (hour >= 13 && hour < 18) || (hour >= 20 && hour < 22)) {
-            this.t = new egret.Bitmap(); //创建零件位图	
-            this.t.texture = RES.getRes(this.a); //根据数字找到图片的编号
-            this.addChild(this.t);
-            this.t.x = Math.floor(Math.random() * (400 - 120 + 120)) + 120;
-            this.t.y = Math.floor(Math.random() * (350 - 150 + 150)) + 150;
-            this.t.scaleX = 0.3;
-            this.t.scaleY = 0.3;
-            this.spr = new TweenMove(); //TweenMove的实例
-            // this.spr.BitmapTest(this.t);
-            this.t.touchEnabled = true; //设置鼠标点击事件
-            this.t.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Move, this);
+            if (this.NUMber == 0) {
+                this.s = Math.round(Math.random() * (45 - 21)) + 21; //创建45-21之间的随机数字
+                this.a = this.s.toString();
+                this.t = new egret.Bitmap(); //创建零件位图	
+                this.t.texture = RES.getRes(this.a); //根据数字找到图片的编号
+                this.addChild(this.t);
+                this.t.x = Math.floor(Math.random() * (400 - 120 + 120)) + 120;
+                this.t.y = Math.floor(Math.random() * (350 - 150 + 150)) + 150;
+                this.t.scaleX = 0.3;
+                this.t.scaleY = 0.3;
+                this.spr = new TweenMove(); //TweenMove的实例
+                // this.spr.BitmapTest(this.t);
+                this.t.touchEnabled = true; //设置鼠标点击事件
+                this.t.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Move, this);
+            }
         }
     };
     ThirdScene.prototype.GO2 = function () {
         //egret.localStorage.clear();
+        if (this.TanC.ProBar() == true) {
+            egret.localStorage.removeItem("NUMber1");
+        }
+        if (egret.localStorage.getItem("NUMBER1")) {
+            this.NUMber1 = parseInt(egret.localStorage.getItem("NUMBER1"));
+        }
+        else {
+            this.NUMber1 = 0;
+        }
         if ((parseInt(egret.localStorage.getItem("d1")) == 7) || (this.data() == true)) {
-            this.s = Math.floor(Math.random() * (45 - 21 + 21)) + 21; //创建1-18之间的随机数字
-            this.a = this.s.toString(); //规定零件刷新时间，每天的（8-10），（16-18），（20-22）
-            this.t2 = new egret.Bitmap(); //创建零件位图	
-            this.t2.texture = RES.getRes(this.a); //根据数字找到图片的编号
-            this.addChild(this.t2);
-            this.t2.x = Math.floor(Math.random() * (400 - 120 + 120)) + 120;
-            this.t2.y = Math.floor(Math.random() * (350 - 150 + 150)) + 150;
-            this.t2.scaleX = 0.3;
-            this.t2.scaleY = 0.3;
-            this.spr = new TweenMove(); //TweenMove的实例
-            // this.spr.BitmapTest(this.t);
-            this.t2.touchEnabled = true; //设置鼠标点击事件
-            this.t2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Move2, this);
+            if (this.NUMber1 == 0) {
+                this.s = Math.floor(Math.random() * (45 - 21 + 21)) + 21; //创建1-18之间的随机数字
+                this.a = this.s.toString(); //规定零件刷新时间，每天的（8-10），（16-18），（20-22）
+                this.t2 = new egret.Bitmap(); //创建零件位图	
+                this.t2.texture = RES.getRes(this.a); //根据数字找到图片的编号
+                this.addChild(this.t2);
+                this.t2.x = Math.floor(Math.random() * (400 - 120 + 120)) + 120;
+                this.t2.y = Math.floor(Math.random() * (350 - 150 + 150)) + 150;
+                this.t2.scaleX = 0.3;
+                this.t2.scaleY = 0.3;
+                this.spr = new TweenMove(); //TweenMove的实例
+                // this.spr.BitmapTest(this.t);
+                this.t2.touchEnabled = true; //设置鼠标点击事件
+                this.t2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Move2, this);
+            }
         }
     };
     ThirdScene.prototype.GO3 = function () {
         //egret.localStorage.clear();
-        this.s = Math.floor(Math.random() * (18 - 1 + 1)) + 1; //创建1-18之间的随机数字
-        this.a = this.s.toString();
+        if (this.TanC.ProBar() == true) {
+            egret.localStorage.removeItem("NUMBER2");
+        }
+        if (egret.localStorage.getItem("NUMBER2")) {
+            this.NUMber2 = parseInt(egret.localStorage.getItem("NUMBER2"));
+        }
+        else {
+            this.NUMber2 = 0;
+        }
         if (this.data2() == true) {
-            this.s = Math.floor(Math.random() * (18 - 1 + 1)) + 1; //创建1-18之间的随机数字
-            this.a = this.s.toString();
-            this.t3 = new egret.Bitmap(); //创建零件位图	
-            this.t3.texture = RES.getRes(this.a); //根据数字找到图片的编号
-            this.addChild(this.t3);
-            this.t3.x = Math.floor(Math.random() * (400 - 120 + 120)) + 120;
-            this.t3.y = Math.floor(Math.random() * (350 - 150 + 150)) + 150;
-            this.t3.scaleX = 0.2;
-            this.t3.scaleY = 0.2;
-            this.spr = new TweenMove(); //TweenMove的实例
-            // this.spr.BitmapTest(this.t);
-            this.t3.touchEnabled = true; //设置鼠标点击事件
-            this.t3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Move3, this);
+            if (this.NUMber2 == 0) {
+                this.s = Math.floor(Math.random() * (18 - 1 + 1)) + 1; //创建1-18之间的随机数字
+                this.a = this.s.toString();
+                this.t3 = new egret.Bitmap(); //创建零件位图	
+                this.t3.texture = RES.getRes(this.a); //根据数字找到图片的编号
+                this.addChild(this.t3);
+                this.t3.x = Math.floor(Math.random() * (400 - 120 + 120)) + 120;
+                this.t3.y = Math.floor(Math.random() * (350 - 150 + 150)) + 150;
+                this.t3.scaleX = 0.2;
+                this.t3.scaleY = 0.2;
+                this.spr = new TweenMove(); //TweenMove的实例
+                // this.spr.BitmapTest(this.t);
+                this.t3.touchEnabled = true; //设置鼠标点击事件
+                this.t3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Move3, this);
+            }
         }
     };
     ThirdScene.prototype.data = function () {
@@ -137,8 +173,10 @@ var ThirdScene = (function (_super) {
     };
     ThirdScene.prototype.Move = function (event) {
         this.spr.TouchMove(this.t); //调用TweenMove类中的动作函数
-        //console.log(this.s)
-        //egret.localStorage.clear();	
+        var N = parseInt(egret.localStorage.getItem("NUMBER"));
+        N = N + 1;
+        var M = N.toString();
+        egret.localStorage.setItem("NUMBER", M);
         if (this.s == 21) {
             if (egret.localStorage.getItem("t1")) {
                 this.G1 = egret.localStorage.getItem("t1");
@@ -442,6 +480,10 @@ var ThirdScene = (function (_super) {
     };
     ThirdScene.prototype.Move2 = function (event) {
         this.spr.TouchMove(this.t2); //调用TweenMove类中的动作函数
+        var N2 = parseInt(egret.localStorage.getItem("NUMBER1"));
+        N2 = N2 + 1;
+        var M2 = N2.toString();
+        egret.localStorage.setItem("NUMBER1", M2);
         //egret.localStorage.clear();	
         if (this.s == 21) {
             if (egret.localStorage.getItem("t1")) {
@@ -746,6 +788,10 @@ var ThirdScene = (function (_super) {
     };
     ThirdScene.prototype.Move3 = function (event) {
         this.spr.TouchMove(this.t3); //调用TweenMove类中的动作函数
+        var N3 = parseInt(egret.localStorage.getItem("NUMBER2"));
+        N3 = N3 + 1;
+        var M3 = N3.toString();
+        egret.localStorage.setItem("NUMBER2", M3);
         //egret.localStorage.clear();	
         if (this.s == 21) {
             if (egret.localStorage.getItem("t1")) {

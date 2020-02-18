@@ -3,23 +3,5 @@
 	<e:Image width="640" height="1136" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" source="beijin"/>
 	<e:Image width="640" height="155.46" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" source="title"/>
 	<e:Image width="118.49" height="97.27" x="260.76" y="29.1" anchorOffsetX="0" anchorOffsetY="0" source="warehouse"/>
-	<e:Image width="115.45" height="115.46" x="65.61" y="180.27" anchorOffsetX="0" anchorOffsetY="0" source="1"/>
-	<e:Image width="115.45" height="115.46" x="263.8" y="180.27" anchorOffsetX="0" anchorOffsetY="0" source="2"/>
-	<e:Image width="115.45" height="115.46" x="469.54" y="180.27" anchorOffsetX="0" anchorOffsetY="0" source="3"/>
-	<e:Image width="115.45" height="115.46" x="65.61" y="343.31" anchorOffsetX="0" anchorOffsetY="0" source="4"/>
-	<e:Image width="115.45" height="115.46" x="263.8" y="343.31" anchorOffsetX="0" anchorOffsetY="0" source="5"/>
-	<e:Image width="115.45" height="115.46" x="469.54" y="343.31" anchorOffsetX="0" anchorOffsetY="0" source="6"/>
-	<e:Image width="115.45" height="115.46" x="65.61" y="501.18" anchorOffsetX="0" anchorOffsetY="0" source="7"/>
-	<e:Image width="115.45" height="115.46" x="263.8" y="501.18" anchorOffsetX="0" anchorOffsetY="0" source="8"/>
-	<e:Image width="115.45" height="115.46" x="469.54" y="501.18" anchorOffsetX="0" anchorOffsetY="0" source="9"/>
-	<e:Image width="115.45" height="115.46" x="65.61" y="661.48" anchorOffsetX="0" anchorOffsetY="0" source="10"/>
-	<e:Image width="115.45" height="115.46" x="263.8" y="661.48" anchorOffsetX="0" anchorOffsetY="0" source="11"/>
-	<e:Image width="115.45" height="115.46" x="469.54" y="661.48" anchorOffsetX="0" anchorOffsetY="0" source="12"/>
-	<e:Image width="115.45" height="115.46" x="65.61" y="823.61" anchorOffsetX="0" anchorOffsetY="0" source="13"/>
-	<e:Image width="115.45" height="115.46" x="263.8" y="823.61" anchorOffsetX="0" anchorOffsetY="0" source="14"/>
-	<e:Image width="115.45" height="115.46" x="469.54" y="823.61" anchorOffsetX="0" anchorOffsetY="0" source="15"/>
-	<e:Image width="115.45" height="115.46" x="64.09" y="976.9" anchorOffsetX="0" anchorOffsetY="0" source="16"/>
-	<e:Image width="115.45" height="115.46" x="262.28" y="976.9" anchorOffsetX="0" anchorOffsetY="0" source="17"/>
-	<e:Image width="115.45" height="115.46" x="468.02" y="976.9" anchorOffsetX="0" anchorOffsetY="0" source="18"/>
 	<ns1:MyNewButton id="Close" label="Button" x="34.61" y="23.74" skinName="MyButtonSkin"/>
 </e:Skin>

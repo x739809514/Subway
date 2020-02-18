@@ -128,19 +128,21 @@ var GameScene2 = (function (_super) {
             this.NUMber1 = 0;
         }
         if ((parseInt(egret.localStorage.getItem("d1")) == 7) || (this.data() == true)) {
-            this.s = Math.floor(Math.random() * (18 - 1 + 1)) + 1; //创建1-18之间的随机数字
-            this.a = this.s.toString();
-            this.t2 = new egret.Bitmap(); //创建零件位图	
-            this.t2.texture = RES.getRes(this.a); //根据数字找到图片的编号
-            this.addChild(this.t2);
-            this.t2.x = Math.floor(Math.random() * (400 - 120 + 120)) + 120;
-            this.t2.y = Math.floor(Math.random() * (350 - 150 + 150)) + 150;
-            this.t2.scaleX = 0.2;
-            this.t2.scaleY = 0.2;
-            this.spr = new TweenMove(); //TweenMove的实例
-            // this.spr.BitmapTest(this.t);
-            this.t2.touchEnabled = true; //设置鼠标点击事件
-            this.t2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Move2, this);
+            if (this.NUMber1 == 0) {
+                this.s = Math.floor(Math.random() * (18 - 1 + 1)) + 1; //创建1-18之间的随机数字
+                this.a = this.s.toString();
+                this.t2 = new egret.Bitmap(); //创建零件位图	
+                this.t2.texture = RES.getRes(this.a); //根据数字找到图片的编号
+                this.addChild(this.t2);
+                this.t2.x = Math.floor(Math.random() * (400 - 120 + 120)) + 120;
+                this.t2.y = Math.floor(Math.random() * (350 - 150 + 150)) + 150;
+                this.t2.scaleX = 0.2;
+                this.t2.scaleY = 0.2;
+                this.spr = new TweenMove(); //TweenMove的实例
+                // this.spr.BitmapTest(this.t);
+                this.t2.touchEnabled = true; //设置鼠标点击事件
+                this.t2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Move2, this);
+            }
         }
     };
     GameScene2.prototype.GO3 = function () {
@@ -155,25 +157,27 @@ var GameScene2 = (function (_super) {
             this.NUMber2 = 0;
         }
         if (this.data2() == true) {
-            this.s = Math.floor(Math.random() * (18 - 1 + 1)) + 1; //创建1-18之间的随机数字
-            this.a = this.s.toString();
-            this.s = Math.floor(Math.random() * (18 - 1 + 1)) + 1; //创建1-18之间的随机数字
-            this.a = this.s.toString();
-            this.t3 = new egret.Bitmap(); //创建零件位图	
-            this.t3.texture = RES.getRes(this.a); //根据数字找到图片的编号
-            this.addChild(this.t3);
-            this.t3.x = Math.floor(Math.random() * (400 - 120 + 120)) + 120;
-            this.t3.y = Math.floor(Math.random() * (350 - 150 + 150)) + 150;
-            this.t3.scaleX = 0.2;
-            this.t3.scaleY = 0.2;
-            this.spr = new TweenMove(); //TweenMove的实例
-            // this.spr.BitmapTest(this.t);
-            this.t3.touchEnabled = true; //设置鼠标点击事件
-            this.t3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Move3, this);
+            if (this.NUMber2 == 0) {
+                this.s = Math.floor(Math.random() * (18 - 1 + 1)) + 1; //创建1-18之间的随机数字
+                this.a = this.s.toString();
+                this.s = Math.floor(Math.random() * (18 - 1 + 1)) + 1; //创建1-18之间的随机数字
+                this.a = this.s.toString();
+                this.t3 = new egret.Bitmap(); //创建零件位图	
+                this.t3.texture = RES.getRes(this.a); //根据数字找到图片的编号
+                this.addChild(this.t3);
+                this.t3.x = Math.floor(Math.random() * (400 - 120 + 120)) + 120;
+                this.t3.y = Math.floor(Math.random() * (350 - 150 + 150)) + 150;
+                this.t3.scaleX = 0.2;
+                this.t3.scaleY = 0.2;
+                this.spr = new TweenMove(); //TweenMove的实例
+                // this.spr.BitmapTest(this.t);
+                this.t3.touchEnabled = true; //设置鼠标点击事件
+                this.t3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Move3, this);
+            }
         }
     };
     GameScene2.prototype.data = function () {
-        var data2 = JSON.parse(egret.localStorage.getItem('json'));
+        var data2 = "南湖家园"; //JSON.parse(<string>egret.localStorage.getItem('json'));
         if (data2 == "南湖家园") {
             return true;
         }
@@ -182,7 +186,7 @@ var GameScene2 = (function (_super) {
         }
     };
     GameScene2.prototype.data2 = function () {
-        var data3 = JSON.parse(egret.localStorage.getItem('json2'));
+        var data3 = "15"; // JSON.parse(<string>egret.localStorage.getItem('json2'));
         console.log(data3);
         if (parseInt(data3) >= 10) {
             return true;
