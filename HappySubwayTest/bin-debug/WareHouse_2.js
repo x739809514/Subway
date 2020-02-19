@@ -18,6 +18,9 @@ var WareHouse_2 = (function (_super) {
         var _this = _super.call(this) || this;
         _this.skinName = "resource/eui_skins/ware2.exml";
         _this.addEventListener(egret.Event.ADDED_TO_STAGE, _this.Label, _this);
+        RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, _this.GetBitMap, _this);
+        RES.loadConfig("resource/default.res.json", "resource/");
+        RES.loadGroup("TrainGear2");
         return _this;
     }
     WareHouse_2.prototype.onComplete = function () {
@@ -26,6 +29,268 @@ var WareHouse_2 = (function (_super) {
     };
     WareHouse_2.prototype.OnClose = function (event) {
         SceneManager.Instance.closeScene();
+    };
+    WareHouse_2.prototype.Matrix = function (s) {
+        var colorMatrix = [
+            0.3, 0.6, 0, 0, 0,
+            0.3, 0.6, 0, 0, 0,
+            0.3, 0.6, 0, 0, 0,
+            0, 0, 0, 1, 0
+        ];
+        var colorFlilter = new egret.ColorMatrixFilter(colorMatrix);
+        s.filters = [colorFlilter];
+    };
+    WareHouse_2.prototype.GetBitMap = function () {
+        var BitMap1 = new egret.Bitmap();
+        BitMap1.texture = RES.getRes("21");
+        this.addChild(BitMap1);
+        BitMap1.x = 64;
+        BitMap1.y = 187.67;
+        BitMap1.scaleX = 0.4;
+        BitMap1.scaleY = 0.4;
+        if (!this.i1) {
+            this.Matrix(BitMap1);
+        }
+        var BitMap2 = new egret.Bitmap();
+        BitMap2.texture = RES.getRes("22");
+        this.addChild(BitMap2);
+        BitMap2.x = 208;
+        BitMap2.y = 187.67;
+        BitMap2.scaleX = 0.4;
+        BitMap2.scaleY = 0.4;
+        if (!this.i2) {
+            this.Matrix(BitMap2);
+        }
+        var BitMap3 = new egret.Bitmap();
+        BitMap3.texture = RES.getRes("23");
+        this.addChild(BitMap3);
+        BitMap3.x = 352;
+        BitMap3.y = 187.67;
+        BitMap3.scaleX = 0.4;
+        BitMap3.scaleY = 0.4;
+        if (!this.i3) {
+            this.Matrix(BitMap3);
+        }
+        var BitMap4 = new egret.Bitmap();
+        BitMap4.texture = RES.getRes("24");
+        this.addChild(BitMap4);
+        BitMap4.x = 496;
+        BitMap4.y = 187.67;
+        BitMap4.scaleX = 0.4;
+        BitMap4.scaleY = 0.4;
+        if (!this.i4) {
+            this.Matrix(BitMap4);
+        }
+        var BitMap5 = new egret.Bitmap();
+        BitMap5.texture = RES.getRes("25");
+        this.addChild(BitMap5);
+        BitMap5.x = 64;
+        BitMap5.y = 304.64;
+        BitMap5.scaleX = 0.4;
+        BitMap5.scaleY = 0.4;
+        if (!this.i5) {
+            this.Matrix(BitMap5);
+        }
+        var BitMap6 = new egret.Bitmap();
+        BitMap6.texture = RES.getRes("26");
+        this.addChild(BitMap6);
+        BitMap6.x = 208;
+        BitMap6.y = 304.64;
+        BitMap6.scaleX = 0.4;
+        BitMap6.scaleY = 0.4;
+        if (!this.i6) {
+            this.Matrix(BitMap6);
+        }
+        var BitMap7 = new egret.Bitmap();
+        BitMap7.texture = RES.getRes("27");
+        this.addChild(BitMap7);
+        BitMap7.x = 352;
+        BitMap7.y = 304.64;
+        BitMap7.scaleX = 0.4;
+        BitMap7.scaleY = 0.4;
+        if (!this.i7) {
+            this.Matrix(BitMap7);
+        }
+        var BitMap8 = new egret.Bitmap();
+        BitMap8.texture = RES.getRes("28");
+        this.addChild(BitMap8);
+        BitMap8.x = 496;
+        BitMap8.y = 304.64;
+        BitMap8.scaleX = 0.4;
+        BitMap8.scaleY = 0.4;
+        if (!this.i8) {
+            this.Matrix(BitMap8);
+        }
+        var BitMap9 = new egret.Bitmap();
+        BitMap9.texture = RES.getRes("29");
+        this.addChild(BitMap9);
+        BitMap9.x = 64;
+        BitMap9.y = 420.7;
+        BitMap9.scaleX = 0.4;
+        BitMap9.scaleY = 0.4;
+        if (!this.i9) {
+            this.Matrix(BitMap9);
+        }
+        var BitMap10 = new egret.Bitmap();
+        BitMap10.texture = RES.getRes("30");
+        this.addChild(BitMap10);
+        BitMap10.x = 208;
+        BitMap10.y = 420.7;
+        BitMap10.scaleX = 0.4;
+        BitMap10.scaleY = 0.4;
+        if (!this.i10) {
+            this.Matrix(BitMap10);
+        }
+        var BitMap11 = new egret.Bitmap();
+        BitMap11.texture = RES.getRes("31");
+        this.addChild(BitMap11);
+        BitMap11.x = 352;
+        BitMap11.y = 420.7;
+        BitMap11.scaleX = 0.4;
+        BitMap11.scaleY = 0.4;
+        if (!this.i11) {
+            this.Matrix(BitMap11);
+        }
+        var BitMap12 = new egret.Bitmap();
+        BitMap12.texture = RES.getRes("32");
+        this.addChild(BitMap12);
+        BitMap12.x = 496;
+        BitMap12.y = 420.7;
+        BitMap12.scaleX = 0.4;
+        BitMap12.scaleY = 0.4;
+        if (!this.i12) {
+            this.Matrix(BitMap12);
+        }
+        var BitMap13 = new egret.Bitmap();
+        BitMap13.texture = RES.getRes("33");
+        this.addChild(BitMap13);
+        BitMap13.x = 64;
+        BitMap13.y = 530.72;
+        BitMap13.scaleX = 0.4;
+        BitMap13.scaleY = 0.4;
+        if (!this.i13) {
+            this.Matrix(BitMap13);
+        }
+        var BitMap14 = new egret.Bitmap();
+        BitMap14.texture = RES.getRes("34");
+        this.addChild(BitMap14);
+        BitMap14.x = 208;
+        BitMap14.y = 530.72;
+        BitMap14.scaleX = 0.4;
+        BitMap14.scaleY = 0.4;
+        if (!this.i14) {
+            this.Matrix(BitMap14);
+        }
+        var BitMap15 = new egret.Bitmap();
+        BitMap15.texture = RES.getRes("35");
+        this.addChild(BitMap15);
+        BitMap15.x = 352;
+        BitMap15.y = 530.72;
+        BitMap15.scaleX = 0.4;
+        BitMap15.scaleY = 0.4;
+        if (!this.i15) {
+            this.Matrix(BitMap15);
+        }
+        var BitMap16 = new egret.Bitmap();
+        BitMap16.texture = RES.getRes("36");
+        this.addChild(BitMap16);
+        BitMap16.x = 496;
+        BitMap16.y = 530.72;
+        BitMap16.scaleX = 0.4;
+        BitMap16.scaleY = 0.4;
+        if (!this.i16) {
+            this.Matrix(BitMap16);
+        }
+        var BitMap17 = new egret.Bitmap();
+        BitMap17.texture = RES.getRes("37");
+        this.addChild(BitMap17);
+        BitMap17.x = 64;
+        BitMap17.y = 654.36;
+        BitMap17.scaleX = 0.4;
+        BitMap17.scaleY = 0.4;
+        if (!this.i17) {
+            this.Matrix(BitMap17);
+        }
+        var BitMap18 = new egret.Bitmap();
+        BitMap18.texture = RES.getRes("38");
+        this.addChild(BitMap18);
+        BitMap18.x = 208;
+        BitMap18.y = 654.36;
+        BitMap18.scaleX = 0.4;
+        BitMap18.scaleY = 0.4;
+        if (!this.i18) {
+            this.Matrix(BitMap18);
+        }
+        var BitMap19 = new egret.Bitmap();
+        BitMap19.texture = RES.getRes("39");
+        this.addChild(BitMap19);
+        BitMap19.x = 352;
+        BitMap19.y = 654.36;
+        BitMap19.scaleX = 0.4;
+        BitMap19.scaleY = 0.4;
+        if (!this.i19) {
+            this.Matrix(BitMap19);
+        }
+        var BitMap20 = new egret.Bitmap();
+        BitMap18.texture = RES.getRes("40");
+        this.addChild(BitMap20);
+        BitMap20.x = 496;
+        BitMap20.y = 654.36;
+        BitMap20.scaleX = 0.4;
+        BitMap20.scaleY = 0.4;
+        if (!this.i20) {
+            this.Matrix(BitMap20);
+        }
+        var BitMap21 = new egret.Bitmap();
+        BitMap21.texture = RES.getRes("41");
+        this.addChild(BitMap21);
+        BitMap21.x = 64;
+        BitMap21.y = 780.11;
+        BitMap21.scaleX = 0.4;
+        BitMap21.scaleY = 0.4;
+        if (!this.i21) {
+            this.Matrix(BitMap21);
+        }
+        var BitMap22 = new egret.Bitmap();
+        BitMap22.texture = RES.getRes("42");
+        this.addChild(BitMap22);
+        BitMap22.x = 208;
+        BitMap22.y = 780.11;
+        BitMap22.scaleX = 0.4;
+        BitMap22.scaleY = 0.4;
+        if (!this.i22) {
+            this.Matrix(BitMap22);
+        }
+        var BitMap23 = new egret.Bitmap();
+        BitMap23.texture = RES.getRes("43");
+        this.addChild(BitMap23);
+        BitMap23.x = 352;
+        BitMap23.y = 780.11;
+        BitMap23.scaleX = 0.4;
+        BitMap23.scaleY = 0.4;
+        if (!this.i23) {
+            this.Matrix(BitMap23);
+        }
+        var BitMap24 = new egret.Bitmap();
+        BitMap24.texture = RES.getRes("44");
+        this.addChild(BitMap24);
+        BitMap24.x = 496;
+        BitMap24.y = 780.11;
+        BitMap24.scaleX = 0.4;
+        BitMap24.scaleY = 0.4;
+        if (!this.i24) {
+            this.Matrix(BitMap24);
+        }
+        var BitMap25 = new egret.Bitmap();
+        BitMap25.texture = RES.getRes("45");
+        this.addChild(BitMap25);
+        BitMap25.x = 64;
+        BitMap25.y = 891.63;
+        BitMap25.scaleX = 0.4;
+        BitMap25.scaleY = 0.4;
+        if (!this.i25) {
+            this.Matrix(BitMap25);
+        }
     };
     WareHouse_2.prototype.Label = function () {
         this.i1 = egret.localStorage.getItem("t1"); //获取本地数据

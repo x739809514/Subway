@@ -14,7 +14,7 @@ class GameScene2 extends Scene {
 	public NUMber:number;//函数执行次数
 	public NUMber1:number;//函数执行次数
 	public NUMber2:number;//函数执行次数
-	
+	public NUMber3:number;
 	public a:string;
 	public Game:eui.Image;
 	public Gsub:SnakeGO;
@@ -50,12 +50,14 @@ class GameScene2 extends Scene {
         RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE,this.GO,this);
 		RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE,this.GO2,this);
 		RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE,this.GO3,this);
+		RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE,this.GideGO,this);
         RES.loadConfig("resource/default.res.json","resource/");
         RES.loadGroup("cangku");
 		RES.loadGroup("subway");
+		RES.loadGroup("subway2");
 		
     }
-	
+	//一系列点击事件
 	protected onComplete() {
 		this.shelf.touchEnabled = true;
 		this.shelf.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTaptc3, this);
@@ -75,7 +77,7 @@ class GameScene2 extends Scene {
 	}
 	private onTapqiehuan() {
 		this.W=new WareHouse();
-		if(this.W.Finish()==true){ 
+		if(1){ //this.W.Finish()==true
 		let s1:ThirdScene = new ThirdScene();
 		//切换到最后的场景
         SceneManager.Instance.changeScene(s1);
@@ -109,6 +111,81 @@ class GameScene2 extends Scene {
         let tc3:shelf=new shelf();
         SceneManager.Instance.pushScene(tc3);
     }
+	private GideGO(event:RES.ResourceEvent){
+		if(egret.localStorage.getItem("NUMBER3")){
+				this.NUMber3=parseInt(egret.localStorage.getItem("NUMBER3"));
+			}else{
+				this.NUMber3=0;
+			}
+		if(this.NUMber3==0){
+			this.Guide();
+		}	
+	}
+	private Guide(){
+		var pic1=new egret.Bitmap();
+		pic1.texture=RES.getRes("dialog1");
+		this.addChild(pic1);
+			pic1.x=640;
+			pic1.y=40;
+			pic1.scaleX=0.01;
+			pic1.scaleY=0.01;
+			pic1.alpha=0;
+			var Tween=egret.Tween.get(pic1);
+			Tween.to({x:255,y:34,scaleX:0.2,scaleY:0.2,alpha:1},100);
+			pic1.touchEnabled=true;
+			pic1.addEventListener(egret.TouchEvent.TOUCH_TAP,function(event:egret.Event){
+				this.removeChild(pic1);
+				
+			},this);
+		var pic2=new egret.Bitmap();
+				pic2.texture=RES.getRes("dialog2");
+				this.addChild(pic2);
+					pic2.x=640;
+					pic2.y=240;
+					pic2.scaleX=0.01;
+					pic2.scaleY=0.01;
+					pic2.alpha=0;
+					var Tween=egret.Tween.get(pic2);
+					Tween.to({x:262,y:200,scaleX:0.2,scaleY:0.2,alpha:1},100);
+					pic2.touchEnabled=true;
+					pic2.addEventListener(egret.TouchEvent.TOUCH_TAP,function(event:egret.Event){
+						this.removeChild(pic2);
+						
+					},this);
+		var pic3=new egret.Bitmap();
+						pic3.texture=RES.getRes("dialog3");
+						this.addChild(pic3);
+							pic3.x=640;
+							pic3.y=240;
+							pic3.scaleX=0.01;
+							pic3.scaleY=0.01;
+							pic3.alpha=0;
+							var Tween=egret.Tween.get(pic3);
+							Tween.to({x:262,y:376,scaleX:0.2,scaleY:0.2,alpha:1},100);
+							pic3.touchEnabled=true;
+							pic3.addEventListener(egret.TouchEvent.TOUCH_TAP,function(event:egret.Event){
+								this.removeChild(pic3);
+								
+							},this);
+		var pic4=new egret.Bitmap();
+								pic4.texture=RES.getRes("dialog4");
+								this.addChild(pic4);
+									pic4.x=0;
+									pic4.y=860;
+									pic4.scaleX=0.01;
+									pic4.scaleY=0.01;
+									pic4.alpha=0;
+									var Tween=egret.Tween.get(pic4);
+									Tween.to({x:10,y:842,scaleX:0.3,scaleY:0.3,alpha:1},100);
+									pic4.touchEnabled=true;
+									pic4.addEventListener(egret.TouchEvent.TOUCH_TAP,function(event:egret.Event){
+										this.removeChild(pic4);
+										let N:number=parseInt(egret.localStorage.getItem("NUMBER3"));
+										N=N+1;
+										var M4=N.toString();
+										egret.localStorage.setItem("NUMBER3",M4);
+									},this);
+	}
 	//实现零件位移和渐变效果
 	public GO(){
 			//egret.localStorage.clear();

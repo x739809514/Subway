@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,description_json,subway_jpg,Train,Gar,task,gear,beijin,Sprite,Task1,Bar,Task2,Task3,Que,back,warehouse,cangkuBak,title,18,17,16,15,14,13,12,11,10,5,7,6,9,4,3,8,2,1,chacha,left,right,Train2,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,cangku2,Tips,gongyi,bar2,duihuanquan,Snake_Score_png,Snake_Time_png,Snake_Over,dialog3,dialog4,dialog2,dialog1",
+			"keys": "checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,description_json,subway_jpg,Train,Gar,task,gear,beijin,Sprite,Task1,Bar,Task2,Task3,Que,back,warehouse,cangkuBak,title,18,17,16,15,14,13,12,11,10,5,7,6,9,4,3,8,2,1,chacha,left,right,Train2,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,cangku2,Tips,gongyi,bar2,duihuanquan,Snake_Score_png,Snake_Time_png,Snake_Over,dialog3,dialog2,dialog1,dialog4",
 			"name": "preload"
 		},
 		{
@@ -21,7 +21,7 @@
 			"name": "data"
 		},
 		{
-			"keys": "duihuanquan,bar2,dialog3,dialog4,dialog2,dialog1",
+			"keys": "duihuanquan,bar2,dialog3,dialog2,dialog1,dialog4",
 			"name": "subway2"
 		},
 		{
@@ -536,11 +536,6 @@
 			"name": "dialog3"
 		},
 		{
-			"url": "assets/game/dialog4.png",
-			"type": "image",
-			"name": "dialog4"
-		},
-		{
 			"url": "assets/game/dialog2.png",
 			"type": "image",
 			"name": "dialog2"
@@ -549,6 +544,11 @@
 			"url": "assets/game/dialog1.png",
 			"type": "image",
 			"name": "dialog1"
+		},
+		{
+			"url": "assets/game/dialog4.png",
+			"type": "image",
+			"name": "dialog4"
 		}
 	]
 }
