@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="TR2" width="243" height="323" xmlns:e="http://ns.egret.com/eui">
+	<e:Image width="242" height="323" x="0" y="0" source="Train2" anchorOffsetX="0" anchorOffsetY="0"/>
+</e:Skin>

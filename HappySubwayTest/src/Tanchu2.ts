@@ -33,7 +33,7 @@ class Tanchu2 extends Scene{
 		
 	}
 	private onTapClose(){
-		
+		SoundManager.Instance.PlaySound(SoundType.Click);
 		SceneManager.Instance.closeScene();
 	}
 	//*******首登奖励********* */

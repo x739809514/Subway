@@ -28,6 +28,7 @@ var WareHouse_2 = (function (_super) {
         this.Close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.OnClose, this);
     };
     WareHouse_2.prototype.OnClose = function (event) {
+        SoundManager.Instance.PlaySound(SoundType.Click);
         SceneManager.Instance.closeScene();
     };
     WareHouse_2.prototype.Matrix = function (s) {
@@ -41,6 +42,7 @@ var WareHouse_2 = (function (_super) {
         s.filters = [colorFlilter];
     };
     WareHouse_2.prototype.GetBitMap = function () {
+        this.Ware2_DATA();
         var BitMap1 = new egret.Bitmap();
         BitMap1.texture = RES.getRes("21");
         this.addChild(BitMap1);
@@ -88,6 +90,7 @@ var WareHouse_2 = (function (_super) {
         BitMap5.y = 304.64;
         BitMap5.scaleX = 0.4;
         BitMap5.scaleY = 0.4;
+        console.log(this.i5);
         if (!this.i5) {
             this.Matrix(BitMap5);
         }
@@ -232,7 +235,7 @@ var WareHouse_2 = (function (_super) {
             this.Matrix(BitMap19);
         }
         var BitMap20 = new egret.Bitmap();
-        BitMap18.texture = RES.getRes("40");
+        BitMap20.texture = RES.getRes("40");
         this.addChild(BitMap20);
         BitMap20.x = 496;
         BitMap20.y = 654.36;
@@ -292,7 +295,7 @@ var WareHouse_2 = (function (_super) {
             this.Matrix(BitMap25);
         }
     };
-    WareHouse_2.prototype.Label = function () {
+    WareHouse_2.prototype.Ware2_DATA = function () {
         this.i1 = egret.localStorage.getItem("t1"); //获取本地数据
         this.i2 = egret.localStorage.getItem("t2");
         this.i3 = egret.localStorage.getItem("t3");
@@ -318,6 +321,9 @@ var WareHouse_2 = (function (_super) {
         this.i23 = egret.localStorage.getItem("t23");
         this.i24 = egret.localStorage.getItem("t24");
         this.i25 = egret.localStorage.getItem("t25");
+    };
+    WareHouse_2.prototype.Label = function () {
+        this.Ware2_DATA();
         var L1 = new egret.TextField(); //将获取到的数据添加到对应零件下。。。本来应该通过循环实现，但是不知为何会报错
         L1.text = this.i1;
         this.addChild(L1);

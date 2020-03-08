@@ -18,8 +18,10 @@ class StartScene extends Scene{
     }
     
     private onTapqiehuan(){
+        
         let s1:GameScene2=new GameScene2();
         //切换到第二个场景
         SceneManager.Instance.changeScene(s1);
+        
     }
 }

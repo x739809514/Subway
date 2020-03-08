@@ -16,9 +16,13 @@ class Food extends egret.Sprite {
         this.init(x, y, r);
     }
 
-    private food: egret.Shape;
+    private food: egret.Bitmap;
     public color: number;
-
+        private bitmap(){
+        this.food=new egret.Bitmap();
+        this.food.texture=RES.getRes("gear");
+        this.addChild(this.food);
+    }
     /**
      * 初始化
      * 
@@ -29,10 +33,7 @@ class Food extends egret.Sprite {
         //获取随机颜色
         this.color = this.randomColor();
 
-        this.food = new egret.Shape();
-        this.food.graphics.beginFill(this.color);
-        this.food.graphics.drawCircle(0, 0, r);
-        this.food.graphics.endFill();
+        this.bitmap();
 
         this.food.x = r;
         this.food.y = r;

@@ -30,6 +30,7 @@ var gameover2 = (function (_super) {
         this.GOver.addEventListener(egret.TouchEvent.TOUCH_TAP, this.GameOver, this);
     };
     gameover2.prototype.GameOver = function () {
+        SoundManager.Instance.PlaySound(SoundType.Click);
         var s1 = new GameScene2();
         SceneManager.Instance.changeScene(s1);
         egret.localStorage.removeItem('snake');

@@ -39,6 +39,12 @@ var ThirdScene = (function (_super) {
         this.house_2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTaptc2, this);
         this.Game2.touchEnabled = true;
         this.Game2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.GameGO, this);
+        this.Btn_Train.touchEnabled = true;
+        this.Btn_Train.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTaptc3, this);
+    };
+    ThirdScene.prototype.onTaptc3 = function () {
+        var s2 = new Train_Station2();
+        SceneManager.Instance.pushScene(s2);
     };
     ThirdScene.prototype.GameGO = function () {
         this.Gsub = new SnakeGO();

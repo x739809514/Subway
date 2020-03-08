@@ -41,6 +41,7 @@ class gameover2 extends Scene{
         this.GOver.addEventListener(egret.TouchEvent.TOUCH_TAP,this.GameOver,this)
     }
     private GameOver(){
+		SoundManager.Instance.PlaySound(SoundType.Click);
         let s1:GameScene2=new GameScene2();
         SceneManager.Instance.changeScene(s1);
 		egret.localStorage.removeItem('snake');

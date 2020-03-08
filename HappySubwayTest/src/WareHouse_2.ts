@@ -42,7 +42,7 @@ class WareHouse_2 extends Scene{
     
     }
     private OnClose(event:egret.TouchEvent){
-
+        SoundManager.Instance.PlaySound(SoundType.Click);
         SceneManager.Instance.closeScene();
     }
     private Matrix(s:egret.Bitmap){
@@ -56,6 +56,7 @@ class WareHouse_2 extends Scene{
         s.filters = [colorFlilter];
     }
     private GetBitMap(){
+        this.Ware2_DATA();
         var BitMap1=new egret.Bitmap();
         BitMap1.texture=RES.getRes("21");
         this.addChild(BitMap1);
@@ -109,6 +110,7 @@ class WareHouse_2 extends Scene{
         BitMap5.y=304.64;
         BitMap5.scaleX=0.4;
         BitMap5.scaleY=0.4;
+        console.log(this.i5)
         if(!this.i5){
             this.Matrix(BitMap5);
         }
@@ -267,7 +269,7 @@ class WareHouse_2 extends Scene{
             this.Matrix(BitMap19);
         }
         var BitMap20=new egret.Bitmap();
-        BitMap18.texture=RES.getRes("40");
+        BitMap20.texture=RES.getRes("40");
         this.addChild(BitMap20);
         BitMap20.x=496;
         BitMap20.y=654.36;
@@ -327,8 +329,7 @@ class WareHouse_2 extends Scene{
             this.Matrix(BitMap25);
         }
     }
-    
-    public Label(){
+    public Ware2_DATA(){
         this.i1=egret.localStorage.getItem("t1");           //获取本地数据
         this.i2=egret.localStorage.getItem("t2");
         this.i3=egret.localStorage.getItem("t3");
@@ -355,6 +356,10 @@ class WareHouse_2 extends Scene{
         this.i24=egret.localStorage.getItem("t24");
         this.i25=egret.localStorage.getItem("t25");
 
+    }
+    
+    public Label(){
+        this.Ware2_DATA();
         var L1=new egret.TextField();      //将获取到的数据添加到对应零件下。。。本来应该通过循环实现，但是不知为何会报错
         L1.text=this.i1;
         this.addChild(L1);

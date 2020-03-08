@@ -3,30 +3,5 @@
 	<e:Image width="640" height="1136" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" source="cangku2"/>
 	<e:Image width="640" height="140" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" source="title"/>
 	<e:Image width="89.7" height="79.09" x="275.15" y="30.45" anchorOffsetX="0" anchorOffsetY="0" source="warehouse"/>
-	<e:Image width="80" height="74.55" x="64" y="187.67" anchorOffsetX="0" anchorOffsetY="0" source="21"/>
-	<e:Image width="80" height="74.55" x="208" y="187.67" anchorOffsetX="0" anchorOffsetY="0" source="22"/>
-	<e:Image width="80" height="74.55" x="352" y="187.67" anchorOffsetX="0" anchorOffsetY="0" source="23"/>
-	<e:Image width="80" height="74.55" x="496" y="187.67" anchorOffsetX="0" anchorOffsetY="0" source="24"/>
-	<e:Image width="80" height="74.55" x="64" y="304.64" anchorOffsetX="0" anchorOffsetY="0" source="25"/>
-	<e:Image width="80" height="74.55" x="208" y="304.64" anchorOffsetX="0" anchorOffsetY="0" source="26"/>
-	<e:Image width="80" height="74.55" x="352" y="304.64" anchorOffsetX="0" anchorOffsetY="0" source="27"/>
-	<e:Image width="80" height="74.55" x="496" y="304.64" anchorOffsetX="0" anchorOffsetY="0" source="28"/>
-	<e:Image width="80" height="74.55" x="64" y="420.7" anchorOffsetX="0" anchorOffsetY="0" source="29"/>
-	<e:Image width="80" height="74.55" x="208" y="420.7" anchorOffsetX="0" anchorOffsetY="0" source="30"/>
-	<e:Image width="80" height="74.55" x="352" y="420.7" anchorOffsetX="0" anchorOffsetY="0" source="31"/>
-	<e:Image width="80" height="74.55" x="496" y="420.7" anchorOffsetX="0" anchorOffsetY="0" source="32"/>
-	<e:Image width="80" height="74.55" x="64" y="530.72" anchorOffsetX="0" anchorOffsetY="0" source="33"/>
-	<e:Image width="80" height="74.55" x="208" y="530.72" anchorOffsetX="0" anchorOffsetY="0" source="34"/>
-	<e:Image width="80" height="74.55" x="352" y="530.72" anchorOffsetX="0" anchorOffsetY="0" source="35"/>
-	<e:Image width="80" height="74.55" x="496" y="530.72" anchorOffsetX="0" anchorOffsetY="0" source="36"/>
-	<e:Image width="80" height="74.55" x="64" y="654.36" anchorOffsetX="0" anchorOffsetY="0" source="37"/>
-	<e:Image width="80" height="74.55" x="208" y="654.36" anchorOffsetX="0" anchorOffsetY="0" source="38"/>
-	<e:Image width="80" height="74.55" x="352" y="654.36" anchorOffsetX="0" anchorOffsetY="0" source="39"/>
-	<e:Image width="80" height="74.55" x="496" y="654.36" anchorOffsetX="0" anchorOffsetY="0" source="40"/>
-	<e:Image width="80" height="74.55" x="64" y="780.11" anchorOffsetX="0" anchorOffsetY="0" source="41"/>
-	<e:Image width="80" height="74.55" x="64" y="891.63" anchorOffsetX="0" anchorOffsetY="0" source="45"/>
-	<e:Image width="80" height="74.55" x="208" y="780.11" anchorOffsetX="0" anchorOffsetY="0" source="42"/>
-	<e:Image width="80" height="74.55" x="352" y="780.11" anchorOffsetX="0" anchorOffsetY="0" source="43"/>
-	<e:Image width="80" height="74.55" x="496" y="780.11" anchorOffsetX="0" anchorOffsetY="0" source="44"/>
 	<ns1:MyNewButton id="Close" label="Button" x="33" y="16" skinName="MyButtonSkin"/>
 </e:Skin>

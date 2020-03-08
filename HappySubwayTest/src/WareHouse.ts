@@ -65,6 +65,7 @@ class WareHouse extends Scene{
         s.filters = [colorFlilter];
     }
     private GetBitMap(){
+        this.Ware_DATA();
         var BitMap1=new egret.Bitmap();
         BitMap1.texture=RES.getRes("1");
         this.addChild(BitMap1);
@@ -268,10 +269,10 @@ class WareHouse extends Scene{
     }
 
     private OnClose(event:egret.TouchEvent){
-        
+        SoundManager.Instance.PlaySound(SoundType.Click);
         SceneManager.Instance.closeScene();
     }
-    public Label(){
+    public Ware_DATA(){
         this.r1=egret.localStorage.getItem("g1");           //获取本地数据
         this.r2=egret.localStorage.getItem("g2");
         this.r3=egret.localStorage.getItem("g3");
@@ -290,7 +291,10 @@ class WareHouse extends Scene{
         this.r16=egret.localStorage.getItem("g16");
         this.r17=egret.localStorage.getItem("g17");
         this.r18=egret.localStorage.getItem("g18");
-
+    }
+    public Label(){
+        
+        this.Ware_DATA();
         var L1=new egret.TextField();      //将获取到的数据添加到对应零件下。。。本来应该通过循环实现，但是不知为何会报错
         L1.text=this.r1;
         this.addChild(L1);

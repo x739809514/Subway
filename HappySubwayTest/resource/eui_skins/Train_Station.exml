@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="Train_Station" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Image width="640" height="1136" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" source="Train_Station"/>
+	<e:Rect width="640" height="186" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" fillColor="0x40a1dd" fillAlpha="0.8"/>
+	<e:Label text="地 铁 工 厂" x="168.61" y="52.24" anchorOffsetX="0" width="302.78" anchorOffsetY="0" height="81.52" fontFamily="Microsoft YaHei" size="60" bold="true"/>
+	<ns1:MyNewButton id="TR1" label="Button" x="47.11" y="245" skinName="TR1"/>
+	<ns1:MyNewButton id="TR2" label="Button" x="349.89" y="243.19" skinName="TR2" anchorOffsetY="0" height="324.81"/>
+	<ns1:MyNewButton id="Turn_Back" label="Button" x="16.11" y="25.24" skinName="MyButtonSkin"/>
+</e:Skin>

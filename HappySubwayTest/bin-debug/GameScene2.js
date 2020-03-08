@@ -11,7 +11,6 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-// TypeScript file
 //游戏界面
 var GameScene2 = (function (_super) {
     __extends(GameScene2, _super);
@@ -20,6 +19,8 @@ var GameScene2 = (function (_super) {
         _this.TanC = new Tanchu2();
         _this.skinName = "resource/eui_skins/GameScene.exml";
         _this.addEventListener(egret.Event.ADDED_TO_STAGE, _this.onAddToStage, _this);
+        //SoundManager.Instance.constructor();
+        SoundManager.Instance;
         return _this;
     }
     //预加载资源
@@ -28,51 +29,33 @@ var GameScene2 = (function (_super) {
         RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.GO2, this);
         RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.GO3, this);
         RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.GideGO, this);
+        //RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE,this.GET_data,this);
         RES.loadConfig("resource/default.res.json", "resource/");
         RES.loadGroup("cangku");
         RES.loadGroup("subway");
         RES.loadGroup("subway2");
+        //RES.loadGroup("data");
     };
     //一系列点击事件
     GameScene2.prototype.onComplete = function () {
         this.shelf.touchEnabled = true;
         this.shelf.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTaptc3, this);
-        this.btn_qh3.touchEnabled = true;
-        this.btn_qh3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTapqiehuan, this);
         this.btn_tc.touchEnabled = true;
         this.btn_tc.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTaptc, this);
         this.house.touchEnabled = true;
         this.house.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTaptc2, this);
         this.Game.touchEnabled = true;
         this.Game.addEventListener(egret.TouchEvent.TOUCH_TAP, this.GameGO, this);
+        this.Btn_Train.touchEnabled = true;
+        this.Btn_Train.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTaptc4, this);
+    };
+    GameScene2.prototype.onTaptc4 = function () {
+        var tc4 = new Train_Station2();
+        SceneManager.Instance.pushScene(tc4);
     };
     GameScene2.prototype.GameGO = function () {
         this.Gsub = new SnakeGO();
         this.addChild(this.Gsub);
-    };
-    GameScene2.prototype.onTapqiehuan = function () {
-        this.W = new WareHouse();
-        if (1) {
-            var s1 = new ThirdScene();
-            //切换到最后的场景
-            SceneManager.Instance.changeScene(s1);
-        }
-        else {
-            var Tips = new egret.Bitmap();
-            Tips.texture = RES.getRes("Tips");
-            this.addChild(Tips);
-            Tips.x = 571.64;
-            Tips.y = 655.88;
-            Tips.scaleX = 0.01;
-            Tips.scaleY = 0.01;
-            Tips.alpha = 0;
-            var Tween = egret.Tween.get(Tips);
-            Tween.to({ x: 244, y: 492, scaleX: 1, scaleY: 1, alpha: 1 }, 100);
-            Tips.touchEnabled = true;
-            Tips.addEventListener(egret.TouchEvent.TOUCH_TAP, function (event) {
-                this.removeChild(Tips);
-            }, this);
-        }
     };
     GameScene2.prototype.onTaptc = function () {
         var tc = new Tanchu2();
@@ -194,6 +177,7 @@ var GameScene2 = (function (_super) {
     };
     GameScene2.prototype.GO2 = function () {
         //egret.localStorage.clear();
+        //this.GET_data();
         if (this.TanC.ProBar() == true) {
             egret.localStorage.removeItem("NUMber1");
         }
@@ -246,7 +230,6 @@ var GameScene2 = (function (_super) {
                 this.t3.scaleX = 0.2;
                 this.t3.scaleY = 0.2;
                 this.spr = new TweenMove(); //TweenMove的实例
-                // this.spr.BitmapTest(this.t);
                 this.t3.touchEnabled = true; //设置鼠标点击事件
                 this.t3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.Move3, this);
             }
@@ -263,7 +246,6 @@ var GameScene2 = (function (_super) {
     };
     GameScene2.prototype.data2 = function () {
         var data3 = "15"; // JSON.parse(<string>egret.localStorage.getItem('json2'));
-        console.log(data3);
         if (parseInt(data3) >= 10) {
             return true;
         }
@@ -272,6 +254,7 @@ var GameScene2 = (function (_super) {
         }
     };
     GameScene2.prototype.Move = function (event) {
+        SoundManager.Instance.PlaySound(SoundType.Right);
         this.spr.TouchMove(this.t); //调用TweenMove类中的动作函数
         var N = parseInt(egret.localStorage.getItem("NUMBER"));
         N = N + 1;
@@ -496,6 +479,7 @@ var GameScene2 = (function (_super) {
         }
     };
     GameScene2.prototype.Move2 = function (event) {
+        SoundManager.Instance.PlaySound(SoundType.Right);
         this.spr.TouchMove(this.t2); //调用TweenMove类中的动作函数
         var N2 = parseInt(egret.localStorage.getItem("NUMBER1"));
         N2 = N2 + 1;
@@ -720,6 +704,7 @@ var GameScene2 = (function (_super) {
         }
     };
     GameScene2.prototype.Move3 = function (event) {
+        SoundManager.Instance.PlaySound(SoundType.Right);
         this.spr.TouchMove(this.t3); //调用TweenMove类中的动作函数
         var N3 = parseInt(egret.localStorage.getItem("NUMBER2"));
         N3 = N3 + 1;

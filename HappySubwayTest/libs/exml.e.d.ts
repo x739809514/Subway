@@ -44,6 +44,10 @@ declare module skins{
 	class ScrollerSkin extends eui.Skin{
 	}
 }
+declare class TR1 extends eui.Skin{
+}
+declare class TR2 extends eui.Skin{
+}
 declare class TanChu extends eui.Skin{
 }
 declare module skins{
@@ -55,6 +59,8 @@ declare class EndScene extends eui.Skin{
 declare module skins{
 	class ToggleSwitchSkin extends eui.Skin{
 	}
+}
+declare class Train_Station extends eui.Skin{
 }
 declare module skins{
 	class VScrollBarSkin extends eui.Skin{

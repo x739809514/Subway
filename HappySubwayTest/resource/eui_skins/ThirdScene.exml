@@ -2,6 +2,8 @@
 <e:Skin class="EndScene" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Label text="最后一个" x="201.67" y="307.66" anchorOffsetX="0" width="236.67" anchorOffsetY="0" height="76.67" size="50"/>
 	<e:Image width="674.85" height="1136" y="0" anchorOffsetX="0" anchorOffsetY="0" source="Train2" x="-34.85"/>
+	<e:Label text="更多地铁" x="156.3" y="1064.42" size="25" fontFamily="Microsoft YaHei" bold="true" textColor="0xffffff"/>
+	<e:Image id="Btn_Train" width="86.67" height="86.66" x="158.34" y="966.54" anchorOffsetX="0" anchorOffsetY="0" source="Btn_Train"/>
 	<e:Label text="任务" x="49.07" y="1064.42" bold="true" size="25" fontFamily="Microsoft YaHei" anchorOffsetY="0" height="51.66" anchorOffsetX="0" width="70" textColor="0xffffff"/>
 	<e:Label text="仓库" x="539.57" y="543" bold="true" fontFamily="Microsoft YaHei" size="25" textColor="0xffffff"/>
 	<e:Label text="加油站" x="527.07" y="402.32" bold="true" fontFamily="Microsoft YaHei" size="25" textColor="0xffffff"/>

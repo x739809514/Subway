@@ -11,7 +11,6 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-// TypeScript file
 var json = (function (_super) {
     __extends(json, _super);
     function json() {
@@ -19,18 +18,14 @@ var json = (function (_super) {
         _this.addEventListener(egret.Event.ADDED_TO_STAGE, _this.onAddToStage, _this);
         return _this;
     }
-    json.prototype.onAddToStage = function () {
+    json.prototype.onAddToStage = function (event) {
         RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.Data, this);
         RES.loadConfig("resource/default.res.json", "resource/");
         RES.loadGroup("data");
     };
     json.prototype.Data = function () {
         var data = RES.getRes("Trip_json");
-        egret.localStorage.setItem('json', JSON.stringify(data['result']['page']['rows'][0]['in_station_name']));
-        egret.localStorage.setItem('json2', JSON.stringify(data['result']['page']['total_count']));
-        var data2 = RES.getRes("User_json");
-        egret.localStorage.setItem('id', JSON.stringify(data2['result']['user']['user_id']));
-        egret.localStorage.setItem('yonghu', JSON.stringify(data2['result']['user']['user_name']));
+        console.log(data['result']);
     };
     return json;
 }(egret.DisplayObjectContainer));

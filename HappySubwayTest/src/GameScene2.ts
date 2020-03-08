@@ -1,4 +1,4 @@
-// TypeScript file
+
 //游戏界面
 class GameScene2 extends Scene {
 	public btn_qh3: eui.Label;
@@ -38,12 +38,15 @@ class GameScene2 extends Scene {
 	public G16:string;
 	public G17:string;
 	public G18:string;
+//	public sound:SoundManager;
+	public Btn_Train:eui.Image;
 	
 	public constructor() {
 		super();
 		this.skinName = "resource/eui_skins/GameScene.exml";
 		 this.addEventListener(egret.Event.ADDED_TO_STAGE,this.onAddToStage,this);
-		 
+		 //SoundManager.Instance.constructor();
+		 SoundManager.Instance;
 	}
 	//预加载资源
 	private onAddToStage(event:egret.Event): void {
@@ -51,54 +54,37 @@ class GameScene2 extends Scene {
 		RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE,this.GO2,this);
 		RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE,this.GO3,this);
 		RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE,this.GideGO,this);
+		//RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE,this.GET_data,this);
         RES.loadConfig("resource/default.res.json","resource/");
         RES.loadGroup("cangku");
 		RES.loadGroup("subway");
 		RES.loadGroup("subway2");
+		//RES.loadGroup("data");
 		
     }
+
 	//一系列点击事件
 	protected onComplete() {
 		this.shelf.touchEnabled = true;
 		this.shelf.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTaptc3, this);
-		this.btn_qh3.touchEnabled = true;
-		this.btn_qh3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTapqiehuan, this);
 		this.btn_tc.touchEnabled=true;
 		this.btn_tc.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onTaptc,this);
 		this.house.touchEnabled=true;
 		this.house.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onTaptc2,this);
 		this.Game.touchEnabled=true;
 		this.Game.addEventListener(egret.TouchEvent.TOUCH_TAP,this.GameGO,this);
-
+		this.Btn_Train.touchEnabled=true;
+		this.Btn_Train.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onTaptc4,this);
+	}
+	public onTaptc4(){
+		let tc4:Train_Station2=new Train_Station2();
+        SceneManager.Instance.pushScene(tc4);
 	}
 	private GameGO(){
 		this.Gsub=new SnakeGO();
 		this.addChild(this.Gsub)
 	}
-	private onTapqiehuan() {
-		this.W=new WareHouse();
-		if(1){ //this.W.Finish()==true
-		let s1:ThirdScene = new ThirdScene();
-		//切换到最后的场景
-        SceneManager.Instance.changeScene(s1);
-		}else{
-			var Tips=new egret.Bitmap();
-			Tips.texture=RES.getRes("Tips");
-			this.addChild(Tips);
-			Tips.x=571.64;
-			Tips.y=655.88;
-			Tips.scaleX=0.01;
-			Tips.scaleY=0.01;
-			Tips.alpha=0;
-			var Tween=egret.Tween.get(Tips);
-			Tween.to({x:244,y:492,scaleX:1,scaleY:1,alpha:1},100);
-			Tips.touchEnabled=true;
-			Tips.addEventListener(egret.TouchEvent.TOUCH_TAP,function(event:egret.Event){
-				this.removeChild(Tips);
-			},this);
-		}
-		
-	}
+
 	private onTaptc(){
         let tc:Tanchu2=new Tanchu2();
         SceneManager.Instance.pushScene(tc);
@@ -224,6 +210,7 @@ class GameScene2 extends Scene {
 
 	public GO2(){
 		//egret.localStorage.clear();
+		//this.GET_data();
 		if(this.TanC.ProBar()==true){
 				egret.localStorage.removeItem("NUMber1");
 			}
@@ -254,6 +241,7 @@ class GameScene2 extends Scene {
 		} 
 	}
 	public GO3(){
+		
 		//egret.localStorage.clear();
 		if(this.TanC.ProBar()==true){
 				egret.localStorage.removeItem("NUMBER2");
@@ -278,7 +266,6 @@ class GameScene2 extends Scene {
 				this.t3.scaleX=0.2;
 				this.t3.scaleY=0.2;
 				this.spr=new TweenMove();//TweenMove的实例
-				// this.spr.BitmapTest(this.t);
 				this.t3.touchEnabled=true; //设置鼠标点击事件
 				this.t3.addEventListener(egret.TouchEvent.TOUCH_TAP,this.Move3,this);
 			}
@@ -297,7 +284,6 @@ class GameScene2 extends Scene {
 	public data2():boolean {	
 		
         var data3 ="15"// JSON.parse(<string>egret.localStorage.getItem('json2'));
-		console.log(data3);
 		if(parseInt(data3)>=10){
 		   return true;
         }else {
@@ -305,6 +291,7 @@ class GameScene2 extends Scene {
         }
     }
 	public Move(event:egret.TouchEvent){
+		SoundManager.Instance.PlaySound(SoundType.Right);
 		this.spr.TouchMove(this.t); //调用TweenMove类中的动作函数
 		let N:number=parseInt(egret.localStorage.getItem("NUMBER"));
 		N=N+1;
@@ -496,6 +483,7 @@ class GameScene2 extends Scene {
         
     }	
 	public Move2(event:egret.TouchEvent){
+		SoundManager.Instance.PlaySound(SoundType.Right);
 		this.spr.TouchMove(this.t2); //调用TweenMove类中的动作函数
 		let N2:number=parseInt(egret.localStorage.getItem("NUMBER1"));
 		N2=N2+1;
@@ -687,6 +675,7 @@ class GameScene2 extends Scene {
         
     }
 	public Move3(event:egret.TouchEvent){
+		SoundManager.Instance.PlaySound(SoundType.Right);
 		this.spr.TouchMove(this.t3); //调用TweenMove类中的动作函数
 		let N3:number=parseInt(egret.localStorage.getItem("NUMBER2"));
 		N3=N3+1;

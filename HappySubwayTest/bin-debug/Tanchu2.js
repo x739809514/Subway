@@ -33,6 +33,7 @@ var Tanchu2 = (function (_super) {
         this.everyDayLogin();
     };
     Tanchu2.prototype.onTapClose = function () {
+        SoundManager.Instance.PlaySound(SoundType.Click);
         SceneManager.Instance.closeScene();
     };
     //*******首登奖励********* */

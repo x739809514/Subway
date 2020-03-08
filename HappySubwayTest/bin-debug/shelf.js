@@ -76,6 +76,7 @@ var shelf = (function (_super) {
         }
     };
     shelf.prototype.TUICHU = function () {
+        SoundManager.Instance.PlaySound(SoundType.Click);
         SceneManager.Instance.closeScene();
     };
     return shelf;

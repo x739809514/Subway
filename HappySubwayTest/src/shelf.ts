@@ -61,6 +61,7 @@ class shelf extends Scene{
         }
     }
     private TUICHU(){
+        SoundManager.Instance.PlaySound(SoundType.Click);
         SceneManager.Instance.closeScene();
     
     }
