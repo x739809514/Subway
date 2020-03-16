@@ -21,7 +21,7 @@
 			"name": "data"
 		},
 		{
-			"keys": "duihuanquan,bar2,dialog3,dialog2,dialog1,dialog4,Btn_Train,Train_Station,TR1",
+			"keys": "duihuanquan,bar2,dialog3,dialog2,dialog1,dialog4,Btn_Train,Train_Station,TR1,friend",
 			"name": "subway2"
 		},
 		{
@@ -555,14 +555,19 @@
 			"name": "TR1"
 		},
 		{
-			"name": "Bubble_click_mp3",
+			"url": "assets/Sound/Bubble_click.mp3",
 			"type": "sound",
-			"url": "assets/Sound/Bubble_click.mp3"
+			"name": "Bubble_click_mp3"
 		},
 		{
-			"name": "click_mp3",
+			"url": "assets/Sound/click.mp3",
 			"type": "sound",
-			"url": "assets/Sound/click.mp3"
+			"name": "click_mp3"
+		},
+		{
+			"url": "assets/game/friend.png",
+			"type": "image",
+			"name": "friend"
 		}
 	]
 }

@@ -44,6 +44,7 @@ class ThirdScene extends Scene {
 	private G24:string;
 	private G25:string;
 	public Btn_Train:eui.Image;
+	private Friend:eui.Image;
 
 	public constructor() {
 		super();
@@ -70,6 +71,12 @@ class ThirdScene extends Scene {
 		this.Game2.addEventListener(egret.TouchEvent.TOUCH_TAP,this.GameGO,this);
 		this.Btn_Train.touchEnabled=true;
 		this.Btn_Train.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onTaptc3,this);
+		this.Friend.touchEnabled=true;
+		this.Friend.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onTaptc3,this);
+	}
+	private onTaptc4(){
+		let s3:Friend2=new Friend2();
+		SceneManager.Instance.pushScene(s3);
 	}
 	private onTaptc3(){
 		let s2:Train_Station2=new Train_Station2();

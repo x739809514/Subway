@@ -6,7 +6,7 @@ class Tanchu2 extends Scene{
 	public isFirst:any;
 	public a:string;
 	public s:number;
-	
+	public TextField:egret.TextField;
 	
 
 	public constructor() {
@@ -30,11 +30,30 @@ class Tanchu2 extends Scene{
 		this.Back.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onTapClose,this);
 		//egret.localStorage.clear();
 		 this.everyDayLogin();
-		
+		 this.GasStation();
 	}
 	private onTapClose(){
 		SoundManager.Instance.PlaySound(SoundType.Click);
 		SceneManager.Instance.closeScene();
+	}
+	
+	private GasStation(){
+		let count=parseInt(egret.localStorage.getItem('snake'));
+		console.log(count);
+		this.TextField=new egret.TextField();	
+		if(count>0){
+			this.TextField.text="今日已完成";
+			this.addChild(this.TextField);
+			this.TextField.x=476.25;
+			this.TextField.y=433.46;
+			this.TextField.size=20;	
+		}else{
+			this.TextField.text="今日未完成";
+			this.addChild(this.TextField);
+			this.TextField.x=476.25;
+			this.TextField.y=433.46;
+			this.TextField.size=20;	
+		}
 	}
 	//*******首登奖励********* */
     //*********************** */

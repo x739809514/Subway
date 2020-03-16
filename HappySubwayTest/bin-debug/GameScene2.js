@@ -48,6 +48,12 @@ var GameScene2 = (function (_super) {
         this.Game.addEventListener(egret.TouchEvent.TOUCH_TAP, this.GameGO, this);
         this.Btn_Train.touchEnabled = true;
         this.Btn_Train.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTaptc4, this);
+        this.friend.touchEnabled = true;
+        this.friend.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTaptc5, this);
+    };
+    GameScene2.prototype.onTaptc5 = function () {
+        var tc5 = new Friend2();
+        SceneManager.Instance.pushScene(tc5);
     };
     GameScene2.prototype.onTaptc4 = function () {
         var tc4 = new Train_Station2();
@@ -157,7 +163,8 @@ var GameScene2 = (function (_super) {
         else {
             this.NUMber = 0;
         }
-        if ((hour >= 8 && hour < 10) || (hour >= 16 && hour < 18) || (hour >= 20 && hour < 22)) {
+        if ((hour >= 8 && hour < 12) || (hour >= 16 && hour < 18) || (hour >= 20 && hour < 22)) {
+            console.log(this.NUMber);
             if (this.NUMber == 0) {
                 this.s = Math.floor(Math.random() * (18 - 1 + 1)) + 1; //创建1-18之间的随机数字
                 this.a = this.s.toString();

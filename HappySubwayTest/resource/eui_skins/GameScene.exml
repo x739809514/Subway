@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="GameScene" width="640" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Image width="640" height="1136" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" source="background"/>
+	<e:Label text="好友" x="539.57" y="667.59" bold="true" fontFamily="Microsoft YaHei" size="25" anchorOffsetX="0" width="54.54" anchorOffsetY="0" height="32.58" textColor="0x000000"/>
+	<e:Image id="friend" width="76.06" height="68.47" x="526.01" y="587.41" anchorOffsetX="0" anchorOffsetY="0" source="friend"/>
 	<e:Image width="761.21" height="379.09" x="0" y="756.91" anchorOffsetX="0" anchorOffsetY="0" source="Train"/>
 	<e:Image id="shelf" width="68.49" height="97.27" x="533.58" y="125.63" anchorOffsetX="0" anchorOffsetY="0" source="shelf"/>
 	<e:Image id="Game" width="76.06" height="92.73" x="533.58" y="293.9" anchorOffsetX="0" anchorOffsetY="0" source="Gar"/>
 	<e:Image id="btn_tc" width="68.48" height="91.21" x="39.83" y="966.54" anchorOffsetX="0" anchorOffsetY="0" source="task"/>
 	<e:Image id="house" width="88" height="85.34" x="523.82" y="446.66" anchorOffsetX="0" anchorOffsetY="0" source="warehouse"/>
 	<e:Label text="公益书架" x="517.82" y="238.33" textColor="0x000000" bold="true" fontFamily="Microsoft YaHei" size="25"/>
-	<e:Image id="btn_qh3" width="50.66" height="56" x="558.98" y="890.46" anchorOffsetX="0" anchorOffsetY="0" source="right"/>
 	<e:Label text="仓库" x="539.57" y="543" textColor="0x000000" bold="true" fontFamily="Microsoft YaHei" size="25"/>
 	<e:Label text="加油站" x="527.07" y="402.32" textColor="0x000000" bold="true" fontFamily="Microsoft YaHei" size="25"/>
 	<e:Label text="任务" x="49.07" y="1064.42" bold="true" textColor="0x000000" size="25" fontFamily="Microsoft YaHei" anchorOffsetY="0" height="51.66" anchorOffsetX="0" width="70"/>

@@ -28,6 +28,7 @@ class gameover2 extends Scene{
     public constructor(){
         super();
         this.skinName="resource/eui_skins/gameover.exml";
+		
        this.addEventListener(egret.Event.ADDED_TO_STAGE,this.onAddToStage,this);
        
     }

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="Friend" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing" width="640">
+	<e:Rect width="640" height="1136" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" fillColor="0xffffff"/>
+	<e:Rect width="638.18" height="160.91" x="0" y="0" anchorOffsetX="0" anchorOffsetY="0" fillColor="0xcaf7b7"/>
+	<e:Label text="好友列表" x="162.17" y="38.18" anchorOffsetX="0" width="419.45" anchorOffsetY="0" height="84.55" size="75" fontFamily="Microsoft YaHei"/>
+	<ns1:MyNewButton id="Back" label="Button" x="21.21" y="20.68" skinName="NewReturnButtonSkin"/>
+</e:Skin>

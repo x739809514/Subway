@@ -41,6 +41,12 @@ var ThirdScene = (function (_super) {
         this.Game2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.GameGO, this);
         this.Btn_Train.touchEnabled = true;
         this.Btn_Train.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTaptc3, this);
+        this.Friend.touchEnabled = true;
+        this.Friend.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTaptc3, this);
+    };
+    ThirdScene.prototype.onTaptc4 = function () {
+        var s3 = new Friend2();
+        SceneManager.Instance.pushScene(s3);
     };
     ThirdScene.prototype.onTaptc3 = function () {
         var s2 = new Train_Station2();

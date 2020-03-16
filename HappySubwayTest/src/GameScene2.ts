@@ -10,7 +10,6 @@ class GameScene2 extends Scene {
 	public house:eui.Image;
 	public shelf:eui.Image;
 	public W:WareHouse;
-	public js:json;
 	public NUMber:number;//函数执行次数
 	public NUMber1:number;//函数执行次数
 	public NUMber2:number;//函数执行次数
@@ -40,6 +39,7 @@ class GameScene2 extends Scene {
 	public G18:string;
 //	public sound:SoundManager;
 	public Btn_Train:eui.Image;
+	public friend:eui.Image;
 	
 	public constructor() {
 		super();
@@ -75,6 +75,12 @@ class GameScene2 extends Scene {
 		this.Game.addEventListener(egret.TouchEvent.TOUCH_TAP,this.GameGO,this);
 		this.Btn_Train.touchEnabled=true;
 		this.Btn_Train.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onTaptc4,this);
+		this.friend.touchEnabled=true;
+		this.friend.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onTaptc5,this);
+	}
+	public onTaptc5(){
+		let tc5:Friend2=new Friend2();
+		SceneManager.Instance.pushScene(tc5);
 	}
 	public onTaptc4(){
 		let tc4:Train_Station2=new Train_Station2();
@@ -186,7 +192,8 @@ class GameScene2 extends Scene {
 			}else{
 				this.NUMber=0;
 			}		
-			if((hour>=8&&hour<10)||(hour>=16&&hour<18)||(hour>=20&&hour<22)){ //规定零件刷新时间，每天的（8-10），（16-18），（20-22）
+			if((hour>=8&&hour<12)||(hour>=16&&hour<18)||(hour>=20&&hour<22)){ //规定零件刷新时间，每天的（8-10），（16-18），（20-22）
+				console.log(this.NUMber)
 				if(this.NUMber==0){
 					this.s=Math.floor(Math.random() * (18 - 1 + 1)) + 1;			//创建1-18之间的随机数字
 					this.a=this.s.toString();

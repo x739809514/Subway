@@ -31,10 +31,30 @@ var Tanchu2 = (function (_super) {
         this.Back.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onTapClose, this);
         //egret.localStorage.clear();
         this.everyDayLogin();
+        this.GasStation();
     };
     Tanchu2.prototype.onTapClose = function () {
         SoundManager.Instance.PlaySound(SoundType.Click);
         SceneManager.Instance.closeScene();
+    };
+    Tanchu2.prototype.GasStation = function () {
+        var count = parseInt(egret.localStorage.getItem('snake'));
+        console.log(count);
+        this.TextField = new egret.TextField();
+        if (count > 0) {
+            this.TextField.text = "今日已完成";
+            this.addChild(this.TextField);
+            this.TextField.x = 476.25;
+            this.TextField.y = 433.46;
+            this.TextField.size = 20;
+        }
+        else {
+            this.TextField.text = "今日未完成";
+            this.addChild(this.TextField);
+            this.TextField.x = 476.25;
+            this.TextField.y = 433.46;
+            this.TextField.size = 20;
+        }
     };
     //*******首登奖励********* */
     //*********************** */

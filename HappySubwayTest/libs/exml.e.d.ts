@@ -8,6 +8,8 @@ declare module skins{
 	class CheckBoxSkin extends eui.Skin{
 	}
 }
+declare class Friend extends eui.Skin{
+}
 declare class GameScene extends eui.Skin{
 }
 declare class GongYi extends eui.Skin{

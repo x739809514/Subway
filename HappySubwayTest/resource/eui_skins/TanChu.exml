@@ -4,6 +4,7 @@
 	<e:Image width="600" height="225.67" x="20" y="56.64" anchorOffsetX="0" anchorOffsetY="0" source="Sprite"/>
 	<e:Image width="600" height="213.55" x="20" y="873.57" anchorOffsetX="0" anchorOffsetY="0" source="Sprite"/>
 	<e:Image width="600" height="225.67" x="20" y="328.95" anchorOffsetX="0" anchorOffsetY="0" source="Sprite"/>
+	<e:Image width="118.49" height="33.64" x="467" y="424.97" anchorOffsetX="0" anchorOffsetY="0" source="Bar"/>
 	<e:Label text="连续收零件7天" x="221.03" y="128.86" anchorOffsetX="0" width="217.94" anchorOffsetY="0" height="40.61" textColor="0x000000" size="25" fontFamily="Microsoft YaHei" bold="true"/>
 	<e:Label text="时光加速器" x="72.39" y="241.7" anchorOffsetX="0" width="120.97" anchorOffsetY="0" height="40.61" textColor="0x000000" size="20" fontFamily="Microsoft YaHei"/>
 	<e:Image width="600" height="225.67" x="20" y="601.26" anchorOffsetX="0" anchorOffsetY="0" source="Sprite"/>
@@ -14,7 +15,9 @@
 	<e:Label text="浏览行闻10秒" x="221" y="663.49" anchorOffsetX="0" width="196.73" anchorOffsetY="0" height="40.61" textColor="0x000000" size="25" fontFamily="Microsoft YaHei" bold="true"/>
 	<e:ProgressBar id="pBar" width="235.15" height="21.52" x="193.82" y="177.5" anchorOffsetX="0" anchorOffsetY="0" maximum="7" minimum="0" enabled="true"/>
 	<e:Image width="118.49" height="33.64" x="467" y="171.44" anchorOffsetX="0" anchorOffsetY="0" source="Bar"/>
+	<e:Image width="118.49" height="33.64" x="467" y="697.28" anchorOffsetX="0" anchorOffsetY="0" source="Bar"/>
 	<e:Label text="今日已完成" x="476.24" y="179.02" size="20" anchorOffsetY="0" height="20"/>
+	<e:Label text="今日未完成" x="476.25" y="704.1" size="20" anchorOffsetY="0" height="20"/>
 	<e:Image width="129" height="115.46" x="54.36" y="374.06" anchorOffsetX="0" anchorOffsetY="0" source="Task2"/>
 	<e:Label text="在加油站中获取额外零件" x="201.67" y="453.46" anchorOffsetX="0" width="240.67" anchorOffsetY="0" height="36.06" textColor="0x000000" size="20"/>
 	<e:Label text="浏览行闻获得随机零件" x="201.67" y="743.29" anchorOffsetX="0" width="240.67" anchorOffsetY="0" height="36.06" textColor="0x000000" size="20"/>
